@@ -66,7 +66,7 @@ export const Login = ({ form, rol }) => {
 								<Checkbox>Recuerdane</Checkbox>
 							</Form.Item>
 
-							<Link className="login-form-forgot" href="">
+							<Link className="login-form-forgot" to="">
 								Olvide mi contraseña
         			</Link>
 						</Form.Item>
@@ -77,7 +77,7 @@ export const Login = ({ form, rol }) => {
         			</Button>
 						</Form.Item>
 					</Form>
-					<Link href="">Registrarse</Link>
+					<Link to="/sing-up">Registrarse</Link>
 					<div className="lin">
 						<div className="lin_line"></div>
 						O

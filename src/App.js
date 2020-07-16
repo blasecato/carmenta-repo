@@ -1,7 +1,7 @@
 import React from 'react';
 import { Public } from "./scenes/Layout/Public/Public";
 
-function App() {
+function App({ history }) {
   return (
     <div className="App">
       <Public/>
