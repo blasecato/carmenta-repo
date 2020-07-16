@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import  {Login } from '../../Auth/Login';
+import  Login  from '../../Auth/Login';
 import { SingUp } from "../../Client/SingUp/SingUp";
 
 export const Public = () => {

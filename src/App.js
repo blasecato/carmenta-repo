@@ -1,10 +1,16 @@
 import React from 'react';
 import { Public } from "./scenes/Layout/Public/Public";
+import { Private } from "./scenes/Layout/Private/Private";
+import { useSelector } from 'react-redux';
 
-function App({ history }) {
+
+export const App = ({history}) => {
+  const { authentication } = useSelector(state => state.auth)
+  console.log(authentication)
   return (
     <div className="App">
-      <Public/>
+      {!authentication && <Public />}
+      {authentication && <Private />}
     </div>
   );
 }

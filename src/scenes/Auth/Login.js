@@ -1,18 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Icon, Input, Button, Spin, notification, Alert, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { auth } from '../../services/Auth/AuthActions'
+import {useSelector, useDispatch} from 'react-redux'
+
 import { Link } from "react-router-dom";
 import linkedin from "../../assets/image/in.png";
 import facebook from "../../assets/image/facebook.png";
 import twitter from "../../assets/image/twitter.png";
 import gmail from "../../assets/image/gmas.png";
 
-
-export const Login = ({ form, rol }) => {
+const Login = ({ form, rol }) => {
+	
+	const { login } = auth;
+	const dispatch = useDispatch()
 
 	const onFinish = values => {
 		console.log('Received values of form: ', values);
+		if (values) {
+
+			console.log(values.email)
+			dispatch(login(values.email, values.password))
+		}
+		 
 	};
+
+	console.log(login)
 
 
 	return (
@@ -46,7 +59,7 @@ export const Login = ({ form, rol }) => {
 						onFinish={onFinish}
 					>
 						<Form.Item
-							name="username"
+							name="email"
 							rules={[{ required: true, message: 'Por favor ingrese su correo electronico.' }]}
 						>
 							<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Correo electronico" />
@@ -121,3 +134,4 @@ export const Login = ({ form, rol }) => {
 	);
 }
 
+export default Login;
