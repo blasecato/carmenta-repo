@@ -14,7 +14,7 @@ function handleChange(value) {
 
 function onChange(date, dateString) {
     console.log(date, dateString);
-  }
+}
 
 
 export const SingUp = ({ form }) => {
@@ -49,17 +49,50 @@ export const SingUp = ({ form }) => {
 
             <div className="container-register">
 
-                <div className="container-form-register">
-                    <div className="register-title">
-                        <h1>Registrate</h1>
+
+                <div className="box-img-form">
+
+                    <div className="img-car">
+
                     </div>
 
+                    <h1>Registrate</h1>
+
+                </div>
+
+                <div className="container-form-register">
                     <Form
                         name="register"
                         className="register-form"
                         initialValues={{ remember: true }}
                         onFinish={onFinish}
                     >
+
+
+                        <Form.Item
+                            name="password"
+                            rules={[{ required: true, message: 'Por favor ingrese su nombre.' }]}
+                        >
+                            <Input
+                                prefix={<LockOutlined className="site-form-item-icon" />}
+                                type="text"
+                                placeholder="Nombre"
+                            />
+                        </Form.Item>
+
+
+                        <Form.Item
+                            name="password"
+                            rules={[{ required: true, message: 'Por favor ingrese sus apellidos.' }]}
+                        >
+                            <Input
+                                prefix={<LockOutlined className="site-form-item-icon" />}
+                                type="text"
+                                placeholder="Apellidos"
+                            />
+                        </Form.Item>
+
+
                         <Form.Item
                             name="email"
                             rules={[{ required: true, message: 'Por favor ingrese su correo electronico.' }]}
@@ -129,6 +162,7 @@ export const SingUp = ({ form }) => {
                             rules={[{ required: true, message: 'Por favor ingrese su fecha de nacimiento.' }]}
                         >
                             <DatePicker onChange={onChange} />
+
                         </Form.Item>
 
 
