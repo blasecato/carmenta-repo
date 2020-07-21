@@ -76,21 +76,21 @@ const Login = ({ form, rol }) => {
 						</Form.Item>
 						<Form.Item>
 							<Form.Item name="remember" valuePropName="checked" noStyle>
-								<Checkbox>Recuerdane</Checkbox>
+								<Checkbox>Recuerdame</Checkbox>
 							</Form.Item>
 
 							<Link className="login-form-forgot" to="">
-								Olvide mi contraseña
+								Olvide la contraseña
         			</Link>
 						</Form.Item>
 
 						<Form.Item className="cont-btn">
 							<Button type="primary" htmlType="submit" className="login-form-button">
-								Iniciar Sesion
+								Iniciar Sesión
         			</Button>
 						</Form.Item>
 					</Form>
-					<Link to="/sing-up">Registrarse</Link>
+					<Link to="/sing-up">Regístrate</Link>
 					<div className="lin">
 						<div className="lin_line"></div>
 						O
