@@ -10,7 +10,7 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            background: #cb1915;
+            background: $primary-dark;
             border-radius: 50%;
             top: -200px;
             left: -200px;
@@ -19,13 +19,13 @@
         &-dow {
             width: 480px;
             height: 480px;
-            background: #ed3b37;
+            background: $primary;
             border-radius: 50%
         }
         &-dow2 {
             width: 280px;
             height: 280px;
-            background: #ed3b37;
+            background: $primary;
             border-radius: 50%;
             
 
@@ -37,7 +37,7 @@
             position: fixed;
             width: 300px;
             height: 300px;
-            background: #cb1915;
+            background:  $primary-dark;
             border-radius: 50%;
             bottom: -100px;
             right: -100px;
@@ -83,7 +83,7 @@
             &_sub-title {
                 font-size: 31px;
                 font-weight: bold;
-                color: #cb1915;
+                color: $primary;
                 text-transform: uppercase;
             }
 
@@ -113,8 +113,8 @@
                     }
                 }
                 .ant-btn-primary {
-                    background: #cb1915;
-                    border-color: #cb1915;
+                    background: $primary;
+                    border-color: $primary;
                     width: 100%;
                     border-radius: 50px;
                     font-size: 17px;
@@ -123,24 +123,24 @@
                     text-transform: uppercase;
                 }
                 .ant-checkbox-checked .ant-checkbox-inner {
-                    background-color: #cb1915;
-                    border-color: #cb1915;
+                    background-color: $primary;
+                    border-color: $primary;
                 }
                 .ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner {
-                    border-color: #cb1915;
+                    border-color: $primary;
                 }
             }
 
             .lin {
                 display: flex;
-                color: #cb1915;
+                color: $primary;
                 margin-top: 13px;
                 justify-content: space-between;
                 
                 &_line{
                     width: 167px;
                     height: 1px;
-                    background: #cb1915;
+                    background: $primary;
                     margin: 10px;
                 }
             }

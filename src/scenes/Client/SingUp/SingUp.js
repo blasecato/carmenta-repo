@@ -39,9 +39,13 @@ export const SingUp = ({ form,history }) => {
 				<div className="box-img-form">
 					<div className="img-car">
 					</div>
-					<h1>Registrate</h1>
+					{/* <h1>Registrate</h1> */}
+					<Button type="primary" className="back" onClick={()=> history.push("/login")}>
+						Iniciar Sesión
+        	</Button>
 				</div>
 				<div className="container-form-register">
+					<h1 className="title">Datos Personales.</h1>
 					<Form
 						name="register"
 						className="register-form"
@@ -53,6 +57,7 @@ export const SingUp = ({ form,history }) => {
 							name="nombres"
 							rules={[{ required: true, message: 'Por favor ingrese su Nombre.' }]}
 						>
+							<label className="item--label">Nombres:</label>
 							<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Nombre" />
 						</Form.Item>
 						<Form.Item
@@ -60,6 +65,7 @@ export const SingUp = ({ form,history }) => {
 							name="apellidos"
 							rules={[{ required: true, message: 'Por favor ingrese su Apellido.' }]}
 						>
+							<label className="item--label">Apellidos:</label>
 							<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Apellido" />
 						</Form.Item>
 						<Form.Item
@@ -67,6 +73,7 @@ export const SingUp = ({ form,history }) => {
 							name="email"
 							rules={[{ required: true, message: 'Por favor ingrese su correo electronico.' }]}
 						>
+							<label className="item--label">Correo Electrónico:</label>
 							<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Correo electrónico" />
 						</Form.Item>
 						<Form.Item
@@ -74,6 +81,7 @@ export const SingUp = ({ form,history }) => {
 							name="password"
 							rules={[{ required: true, message: 'Por favor ingrese su contraseña.' }]}
 						>
+							<label className="item--label">Contraseña:</label>
 							<Input
 								prefix={<LockOutlined className="site-form-item-icon" />}
 								type="password"
@@ -85,6 +93,7 @@ export const SingUp = ({ form,history }) => {
 							name="typeDocumento"
 							rules={[{ required: true, message: 'Por favor ingrese su tipo documento.' }]}
 						>
+							<label className="item--label">Tipo de documento:</label>
 							<Select defaultValue="Tipo de documento" onChange={handleChange}>
 								<Option value="1">Cedula de Ciudadania</Option>
 								<Option value="2">Cedula de Extranjeria</Option>
@@ -96,6 +105,7 @@ export const SingUp = ({ form,history }) => {
 							name="cedula"
 							rules={[{ required: true, message: 'Por favor ingrese su numero de documento' }]}
 						>
+							<label className="item--label">Numero de documento:</label>
 							<Input
 								prefix={<LockOutlined className="site-form-item-icon" />}
 								type="number"
@@ -107,6 +117,7 @@ export const SingUp = ({ form,history }) => {
 							name="telefono"
 							rules={[{ required: true, message: 'Por favor ingrese un numero de telefono.' }]}
 						>
+							<label className="item--label">Telefono:</label>
 							<Input
 								prefix={<LockOutlined className="site-form-item-icon" />}
 								type="number"
@@ -118,6 +129,7 @@ export const SingUp = ({ form,history }) => {
 							name="direccion"
 							rules={[{ required: true, message: 'Por favor ingrese su Dirección.' }]}
 						>
+							<label className="item--label">Direccion:</label>
 							<Input
 								prefix={<LockOutlined className="site-form-item-icon" />}
 								type="text"
@@ -129,11 +141,12 @@ export const SingUp = ({ form,history }) => {
 							name="fechaNacimiento"
 							rules={[{ required: true, message: 'Por favor ingrese su fecha de nacimiento.' }]}
 						>
+							<label className="item--label">Fecha de nacimiento:</label>
 							<DatePicker onChange={onChange} />
 						</Form.Item>
 						<Form.Item className="cont-btn">
 							<Button type="primary" htmlType="submit" className="register-form-button">
-								Aceptar
+								Registrar
         			</Button>
 						</Form.Item>
 					</Form>

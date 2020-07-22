@@ -1,13 +1,59 @@
 .SingUp {
-
+   
+    .title{
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: $primary;
+    }
     .ant-form {
         
         justify-content: space-around;
         display: flex;
         flex-wrap: wrap;
+        .ant-form-item-control-input-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .cont-btn {
+            .ant-form-item-control-input-content {
+                align-items: center;
+            }
+        }
+        
         .item {
             width: 300px;
             margin-bottom: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &--label {
+                margin-bottom: 10px;
+                font-size: 17px;
+                font-weight: 600;
+            }
+        }
+        .ant-input-affix-wrapper {
+            border: 2px solid #000000;
+            height: 40px;
+            border-radius: 50px;
+        }
+        .ant-select-selector {
+            border: 2px solid #000000 !important;
+            height: 40px !important;
+            border-radius: 50px !important;
+        }
+        .ant-picker {
+            border: 2px solid #000000;
+            height: 40px;
+            border-radius: 50px;
+        }
+        .ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+            padding-right: 18px;
+            display: flex;
+            align-items: center;
         }
     }
 
@@ -17,7 +63,7 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            background: #cb1915;
+            background: $primary-dark;
             border-radius: 50%;
             top: -200px;
             left: -200px;
@@ -26,13 +72,13 @@
         &-dow {
             width: 480px;
             height: 480px;
-            background: #ed3b37;
+            background: $primary;
             border-radius: 50%
         }
         &-dow2 {
             width: 280px;
             height: 280px;
-            background: #ed3b37;
+            background: $primary;
             border-radius: 50%;
             
 
@@ -44,7 +90,7 @@
             position: fixed;
             width: 300px;
             height: 300px;
-            background: #cb1915;
+            background: $primary-dark;
             border-radius: 50%;
             bottom: -100px;
             right: -100px;
@@ -70,21 +116,23 @@
         width: 80%;
         justify-content: center;
         text-align: center;
-        z-index: 2;
+        z-index: 1;
         border-radius:0 0 20px 20px;
         padding: 30px 10%;
     }
 
     .box-img-form{
-        background-image: linear-gradient(to right, rgba(12, 13, 14, 0.56), #792f2f52), url("../../../assets/image/register-bmw.jpg");
+        background-image: url("../../../assets/image/register-bmw.jpg");
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         width: 80%;
         height: 280px;
         text-align: center;
         font-size: 50px;
         z-index: 2;
         border-radius: 20px 20px 0 0;
+        background-repeat: no-repeat;
+
     }
 
     .box-img-form h1{
@@ -92,8 +140,8 @@
     }
 
     .ant-btn-primary {
-        background: #cb1915;
-        border-color: #cb1915;
+        background: $primary;
+        border-color: $primary;
         width: 300px;
         border-radius: 50px;
         font-size: 17px;
@@ -103,23 +151,32 @@
     }
 
     .ant-checkbox-checked .ant-checkbox-inner {
-        background-color: #cb1915;
-        border-color: #cb1915;
+        background-color: $primary;
+        border-color: $primary;
     }
     .ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner {
-        border-color: #cb1915;
+        border-color: $primary;
     }
 
     .ant-btn-primary:active {
         color: #fff;
-        background: #cb1915;
-        border-color: #cb1915;
+        background: $primary;
+        border-color: $primary;
     }
 
     .ant-btn-primary:hover, .ant-btn-primary:focus {
         color: #fff;
-        background: #cb1915;
-        border-color: #cb1915;
+        background: $primary;
+        border-color: $primary;
     }
-    
+    label {
+        color: $primary;
+    }
+    .back{
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        z-index: 10;
+        width: 179px;
+    }
 }
