@@ -7,19 +7,25 @@ import { auth } from '../../../services/Auth/AuthActions'
 
 const { Option } = Select;
 
-export const SingUp = ({ form }) => {
+export const SingUp = ({ form,history }) => {
+
+	const { login } = auth;
+	const dispatch = useDispatch()
 
 	const onFinish = values => {
-		console.log('Received values of form: ', values);
+		dispatch(auth.signup(values))
+		history.push("/login")
 	};
 
 	const handleChange = (value) => {
+		
 		console.log(`selected ${value}`);
 	}
 
 	const onChange = (date, dateString) => {
-		console.log(date, dateString);
+			console.log(date);
 	}
+
 
 	return (
 		<div className="SingUp">
