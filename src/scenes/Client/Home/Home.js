@@ -12,19 +12,20 @@ import { Footer } from '../../../components/Footer/Footer';
 
 
 
-export const Home = () => {
+export const Home = ({history}) => {
 
 	const dispatch = useDispatch()
 
 	const handleLogout = () => {
 		dispatch(auth.logout())
+		
 	}
 
 	return (
 
 
 		<div className="Home">
-			<Header />
+			<Header history={history}/>
 
 			<div className="banner">
 

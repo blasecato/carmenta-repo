@@ -6,7 +6,7 @@ import { auth } from '../../services/Auth/AuthActions';
 import logo from "../../assets/image/LogoRentautos.png";
 import { useSelector } from 'react-redux';
 
-export const Header = () => {
+export const Header = ({history}) => {
 	const { authentication , user} = useSelector(state => state.auth)
 	console.log(user)
 
@@ -14,6 +14,7 @@ export const Header = () => {
 
 	const handleLogout = () => {
 		dispatch(auth.logout())
+		history.push("/")
 	}
 
 	return (
