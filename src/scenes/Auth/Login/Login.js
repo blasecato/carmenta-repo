@@ -17,10 +17,10 @@ const Login = ({ form, rol, history,title }) => {
 
 	const onFinish = values => {
 		if (values) {
-			console.log(values.email)
 			dispatch(login(values.email, values.password))
-			dispatch(getUser(values.email))
-			history.push("/")
+			history.push('/home-log')
+			// dispatch(getUser(values.email))
+			console.log(values.email)
 		}
 	};
 

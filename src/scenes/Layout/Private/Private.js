@@ -7,7 +7,7 @@ export const Private = () => {
     <Router>
       <Switch className="h-100">
         <Route exact path="/" component={Home} />
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/home-log" component={Home} />
       </Switch>
     </Router>
   )

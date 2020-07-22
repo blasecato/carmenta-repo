@@ -472,9 +472,6 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
-
-			<Button className="button" onClick={() => handleLogout()}>Cerrar sesión</Button>
-
 		</div>
 	);
 }

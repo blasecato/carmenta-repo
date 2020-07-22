@@ -46,7 +46,7 @@ export const Header = () => {
 						{authentication ?
 							<Button className="button" onClick={() => handleLogout()}>Cerrar sesión</Button>
 						:
-							<Link className="login">
+							<Link to="/login" className="login">
 								Ingresar
 							</Link>	
 						}
