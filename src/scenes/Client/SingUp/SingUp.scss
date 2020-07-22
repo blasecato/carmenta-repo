@@ -1,4 +1,17 @@
 .SingUp {
+
+    .ant-form {
+        
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+            width: 300px;
+            margin-bottom: 45px;
+        }
+    }
+
+    
     .circle {
         &-top {
             position: absolute;
@@ -38,7 +51,9 @@
             z-index: 1;
         }
     }
-
+    .ant-picker {
+        width: 100%;
+    }
 
     .container-register{
         display: flex;
@@ -57,7 +72,7 @@
         text-align: center;
         z-index: 2;
         border-radius:0 0 20px 20px;
-        padding: 30px 20%;
+        padding: 30px 10%;
     }
 
     .box-img-form{
@@ -79,7 +94,7 @@
     .ant-btn-primary {
         background: #cb1915;
         border-color: #cb1915;
-        width: 100%;
+        width: 300px;
         border-radius: 50px;
         font-size: 17px;
         height: 42px;
@@ -106,4 +121,5 @@
         background: #cb1915;
         border-color: #cb1915;
     }
+    
 }

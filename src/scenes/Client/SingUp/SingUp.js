@@ -5,181 +5,135 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { auth } from '../../../services/Auth/AuthActions'
 
-
 const { Option } = Select;
-
-function handleChange(value) {
-    console.log(`selected ${value}`);
-}
-
-function onChange(date, dateString) {
-    console.log(date, dateString);
-}
-
 
 export const SingUp = ({ form }) => {
 
-    const { SingUp } = auth;
-    const dispatch = useDispatch()
+	const onFinish = values => {
+		console.log('Received values of form: ', values);
+	};
 
-    const onFinish = values => {
-        console.log('Received values of form: ', values);
-        if (values) {
+	const handleChange = (value) => {
+		console.log(`selected ${value}`);
+	}
 
-            console.log(values.email)
-            dispatch(SingUp(values.email, values.password))
-        }
+	const onChange = (date, dateString) => {
+		console.log(date, dateString);
+	}
 
-
-    };
-
-
-    return (
-        <div className="SingUp">
-
-            <div className="circle-top">
-                <div className="circle-dow"></div>
-            </div>
-
-            <div className="circle-bottom">
-                <div className="circle-dow2"></div>
-            </div>
-
-
-
-            <div className="container-register">
-
-
-                <div className="box-img-form">
-
-                    <div className="img-car">
-
-                    </div>
-
-                    <h1>Registrate</h1>
-
-                </div>
-
-                <div className="container-form-register">
-                    <Form
-                        name="register"
-                        className="register-form"
-                        initialValues={{ remember: true }}
-                        onFinish={onFinish}
-                    >
-
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: 'Por favor ingrese su nombre.' }]}
-                        >
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="text"
-                                placeholder="Nombre"
-                            />
-                        </Form.Item>
-
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: 'Por favor ingrese sus apellidos.' }]}
-                        >
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="text"
-                                placeholder="Apellidos"
-                            />
-                        </Form.Item>
-
-
-                        <Form.Item
-                            name="email"
-                            rules={[{ required: true, message: 'Por favor ingrese su correo electronico.' }]}
-                        >
-                            <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Correo electrónico" />
-                        </Form.Item>
-
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: 'Por favor ingrese su contraseña.' }]}
-                        >
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="password"
-                                placeholder="Contraseña"
-                            />
-                        </Form.Item>
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: 'Por favor ingrese su tipo documento.' }]}
-                        >
-                            <Select defaultValue="Tipo de documento" style={{ width: 200 }} onChange={handleChange}>
-                                <Option value="cc">Cedula de Ciudadania</Option>
-                                <Option value="Ce">Cedula de Extranjeria</Option>
-                                <Option value="Pasaporte">Pasaporte</Option>
-                            </Select>
-                        </Form.Item>
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: 'Por favor ingrese su numero de documento' }]}
-                        >
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="number"
-                                placeholder="Numero de documento"
-                            />
-                        </Form.Item>
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: 'Por favor ingrese un numero de telefono.' }]}
-                        >
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="number"
-                                placeholder="Telefono"
-                            />
-                        </Form.Item>
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: 'Por favor ingrese su Dirección.' }]}
-                        >
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="text"
-                                placeholder="Dirección"
-                            />
-                        </Form.Item>
-
-
-                        <Form.Item
-                            name="password"
-                            rules={[{ required: true, message: 'Por favor ingrese su fecha de nacimiento.' }]}
-                        >
-                            <DatePicker onChange={onChange} />
-
-                        </Form.Item>
-
-
-                        <Form.Item className="cont-btn">
-                            <Button type="primary" htmlType="submit" className="register-form-button">
-                                Aceptar
+	return (
+		<div className="SingUp">
+			<div className="circle-top">
+				<div className="circle-dow"></div>
+			</div>
+			<div className="circle-bottom">
+				<div className="circle-dow2"></div>
+			</div>
+			<div className="container-register">
+				<div className="box-img-form">
+					<div className="img-car">
+					</div>
+					<h1>Registrate</h1>
+				</div>
+				<div className="container-form-register">
+					<Form
+						name="register"
+						className="register-form"
+						initialValues={{ remember: true }}
+						onFinish={onFinish}
+					>
+						<Form.Item
+							className="item"
+							name="nombres"
+							rules={[{ required: true, message: 'Por favor ingrese su Nombre.' }]}
+						>
+							<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Nombre" />
+						</Form.Item>
+						<Form.Item
+							className="item"
+							name="apellidos"
+							rules={[{ required: true, message: 'Por favor ingrese su Apellido.' }]}
+						>
+							<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Apellido" />
+						</Form.Item>
+						<Form.Item
+							className="item"
+							name="email"
+							rules={[{ required: true, message: 'Por favor ingrese su correo electronico.' }]}
+						>
+							<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Correo electrónico" />
+						</Form.Item>
+						<Form.Item
+							className="item"
+							name="password"
+							rules={[{ required: true, message: 'Por favor ingrese su contraseña.' }]}
+						>
+							<Input
+								prefix={<LockOutlined className="site-form-item-icon" />}
+								type="password"
+								placeholder="Contraseña"
+							/>
+						</Form.Item>
+						<Form.Item
+						className="item"
+							name="typeDocumento"
+							rules={[{ required: true, message: 'Por favor ingrese su tipo documento.' }]}
+						>
+							<Select defaultValue="Tipo de documento" onChange={handleChange}>
+								<Option value="1">Cedula de Ciudadania</Option>
+								<Option value="2">Cedula de Extranjeria</Option>
+								<Option value="3">Pasaporte</Option>
+							</Select>
+						</Form.Item>
+						<Form.Item
+						className="item"
+							name="cedula"
+							rules={[{ required: true, message: 'Por favor ingrese su numero de documento' }]}
+						>
+							<Input
+								prefix={<LockOutlined className="site-form-item-icon" />}
+								type="number"
+								placeholder="Numero de documento"
+							/>
+						</Form.Item>
+						<Form.Item
+						className="item"
+							name="telefono"
+							rules={[{ required: true, message: 'Por favor ingrese un numero de telefono.' }]}
+						>
+							<Input
+								prefix={<LockOutlined className="site-form-item-icon" />}
+								type="number"
+								placeholder="Telefono"
+							/>
+						</Form.Item>
+						<Form.Item
+						className="item"
+							name="direccion"
+							rules={[{ required: true, message: 'Por favor ingrese su Dirección.' }]}
+						>
+							<Input
+								prefix={<LockOutlined className="site-form-item-icon" />}
+								type="text"
+								placeholder="Dirección"
+							/>
+						</Form.Item>
+						<Form.Item
+						className="item"
+							name="fechaNacimiento"
+							rules={[{ required: true, message: 'Por favor ingrese su fecha de nacimiento.' }]}
+						>
+							<DatePicker onChange={onChange} />
+						</Form.Item>
+						<Form.Item className="cont-btn">
+							<Button type="primary" htmlType="submit" className="register-form-button">
+								Aceptar
         			</Button>
-                        </Form.Item>
-                    </Form>
-
-                </div>
-
-
-
-            </div>
-
-        </div>
-    );
+						</Form.Item>
+					</Form>
+				</div>
+			</div>
+		</div>
+	);
 }
 
