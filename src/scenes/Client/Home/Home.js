@@ -7,7 +7,9 @@ import Banner from "../../../assets/image/banner-home.jpg";
 import Picanto from "../../../assets/image/kia-picanto.jpg";
 
 import { auth } from '../../../services/Auth/AuthActions';
-import { Header } from '../../../components/Header/Header'
+import { Header } from '../../../components/Header/Header';
+import { Footer } from '../../../components/Footer/Footer';
+
 
 
 export const Home = () => {
@@ -475,6 +477,7 @@ export const Home = () => {
 
 			<Button className="button" onClick={() => handleLogout()}>Cerrar sesión</Button>
 
+			<Footer/>
 		</div>
 	);
 }

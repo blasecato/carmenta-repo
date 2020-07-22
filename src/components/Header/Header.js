@@ -35,7 +35,7 @@ export const Header = () => {
 							Contáctenos
 						</Link>
 						<Link className="login">
-							Ingresar
+							Cuenta
 						</Link>
 					</div>
 				</div>
