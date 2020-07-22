@@ -1,9 +1,11 @@
+
+
+
 .header {
     display: flex;
     height: 100px;
     justify-content: space-between;
-    margin-bottom: 20px;
-    background-color: #FFEB3B;
+    background-color: #23393d;
 
     .navigation {
         display: flex;
@@ -18,10 +20,25 @@
 
         .nav-bar {
             display: flex;
-            width: 50%;
+            width: 60%;
             justify-content: space-between;
-            font-size: 16px;
-            font-weight: 700;
+            font-size: 14px;
+            font-weight: 600;
+            
+        }
+
+        a{
+            color:#ffffff ;
+        }
+
+        .login{
+            background-color: #ffffff;
+            width: 90px;
+            text-align: center;
+            line-height: 23px;
+            color: #23393d;
+            border-radius: 2em;
+            font-family: 'Poppins', sans-serif;
         }
     }
 

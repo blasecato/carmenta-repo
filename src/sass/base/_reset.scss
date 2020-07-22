@@ -11,6 +11,7 @@ body,
 #root {
   margin: 0;
   height: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 
 html,
@@ -100,6 +101,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -157,7 +159,8 @@ input[type="search"]::-webkit-search-results-decoration {
   -moz-appearance: none;
 }
 a {
-  color: #cb1915 !important;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
 input[type="search"] {
   -webkit-appearance: none;

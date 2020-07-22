@@ -40,6 +40,11 @@ export const Header = () => {
 							Contáctenos
 						</Link>
 
+						<Link className="login">
+							Ingresar
+						</Link>
+
+
 					</div>
 				</div>
 			</div>
