@@ -20,6 +20,7 @@
 
         .nav-bar {
             display: flex;
+            align-items: center;
             width: 60%;
             justify-content: space-between;
             font-size: 14px;
@@ -29,13 +30,15 @@
 
         a{
             color:#ffffff ;
+            text-transform: uppercase;
         }
 
         .login{
             background-color: #ffffff;
-            width: 90px;
+            width: 100px;
             text-align: center;
-            line-height: 23px;
+            line-height: 30px;
+            height: 30px;
             color: #23393d;
             border-radius: 2em;
             font-family: 'Poppins', sans-serif;

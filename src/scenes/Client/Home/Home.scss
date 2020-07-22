@@ -1,4 +1,95 @@
 
-.img-banner{
-    width: 100%;
+.Home{
+    background-color: #ececec;
+
+    
+    .img-banner{
+        width: 100%;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            padding-top: 20px;
+        }
+    }
+
+    .cars-grid {
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    }
+
+    .single-car {
+        display: flex;
+        width: 330px;
+        background-color: white;
+        margin-bottom: 30px;
+        box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.75);
+
+        a.box-car {
+            width: 100%;
+        }
+
+        .content-top {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0 0 0;
+        }
+
+        .model-car {
+            margin-bottom: 10px;
+        
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+                color: #23393d;
+            }
+        
+        }
+
+        .price {
+            display: flex;
+            background-color: #23393d;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                color: #ffffff;
+            }
+        }
+
+        span.anticon.anticon-check-circle {
+            margin-right: 10px;
+            color: #23393d;
+        }
+
+        .car-features span {
+            color: #23393d;
+        }
+
+        .content-bottom {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+
+            img.picanto {
+                width: 280px;
+            }
+        }
+
+        
+    }
+
+    
 }

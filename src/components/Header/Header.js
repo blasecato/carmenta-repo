@@ -14,7 +14,9 @@ export const Header = () => {
 				<div className="navigation">
 					<div className="logo">
 						<Link>
-							<img src={logo} />
+							<div className="title-org">
+								<h1>RENTA <span>Autos</span></h1>
+							</div>
 						</Link>
 					</div>
 
