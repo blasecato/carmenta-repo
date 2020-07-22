@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Icon, Input, Button, Spin, notification, Alert, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import { auth } from '../../services/Auth/AuthActions'
+import { auth } from '../../../services/Auth/AuthActions'
 import {useSelector, useDispatch} from 'react-redux'
 
 import { Link } from "react-router-dom";
-import linkedin from "../../assets/image/in.png";
-import facebook from "../../assets/image/facebook.png";
-import twitter from "../../assets/image/twitter.png";
-import gmail from "../../assets/image/gmas.png";
+import linkedin from "../../../assets/image/in.png";
+import facebook from "../../../assets/image/facebook.png";
+import twitter from "../../../assets/image/twitter.png";
+import gmail from "../../../assets/image/gmas.png";
 
-const Login = ({ form, rol, history }) => {
+const Login = ({ form, rol, history,title }) => {
 	
 	const { login ,getUser } = auth;
 	const dispatch = useDispatch()
@@ -44,7 +44,15 @@ const Login = ({ form, rol, history }) => {
 						Renta Autos
 					</div>
 					<div className="Login_content--box1_slogan">
-						La mejor empresa para alquilar un auto en temporadas vacacionales
+						{title === "Administrador" ?
+							<span>
+								Vista para el inicio de sesion de un Administrador
+							</span>
+							:
+							<span>
+								La mejor empresa para alquilar un auto en temporadas vacacionales
+							</span>							
+						}
 					</div>
 
 

@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { Button} from 'antd';
+import { useDispatch } from 'react-redux';
+import { auth } from '../../services/Auth/AuthActions';
 import logo from "../../assets/image/LogoRentautos.png";
 import { useSelector } from 'react-redux';
 
 export const Header = () => {
 	const { authentication , user} = useSelector(state => state.auth)
 	console.log(user)
+
+	const dispatch = useDispatch()
+
+	const handleLogout = () => {
+		dispatch(auth.logout())
+	}
 
 	return (
 		<div className="SingUp">
@@ -34,9 +43,14 @@ export const Header = () => {
 						<Link>
 							Contáctenos
 						</Link>
-						<Link className="login">
-							Ingresar
-						</Link>
+						{authentication ?
+							<Button className="button" onClick={() => handleLogout()}>Cerrar sesión</Button>
+						:
+							<Link className="login">
+								Ingresar
+							</Link>	
+						}
+						
 					</div>
 				</div>
 			</div>
