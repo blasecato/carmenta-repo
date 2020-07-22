@@ -7,7 +7,7 @@ export const Footer = () => {
 
 	return (
 		<div className="Footer">
-            
+            hola
 
 			
 		</div>
