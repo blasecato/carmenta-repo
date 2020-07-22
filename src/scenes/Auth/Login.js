@@ -12,13 +12,14 @@ import gmail from "../../assets/image/gmas.png";
 
 const Login = ({ form, rol, history }) => {
 	
-	const { login } = auth;
+	const { login ,getUser } = auth;
 	const dispatch = useDispatch()
 
 	const onFinish = values => {
 		if (values) {
 			console.log(values.email)
 			dispatch(login(values.email, values.password))
+			dispatch(getUser(values.email))
 			history.push("/")
 		}
 	};

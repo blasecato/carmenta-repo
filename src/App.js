@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 export const App = ({history}) => {
   const { authentication } = useSelector(state => state.auth)
-  console.log(authentication)
   return (
     <div className="App">
       {!authentication && <Public />}

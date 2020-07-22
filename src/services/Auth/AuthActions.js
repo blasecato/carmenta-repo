@@ -5,6 +5,9 @@ export const { auth } = createActions({
     LOGIN: (email, password) => ({ email, password }),
     LOGIN_RESPONSE: (token) => ({ token }),
 
+    GET_USER: (email) => ({ email }),
+    GET_USER_RESPONSE: (user) => ({ user }),
+
     SIGNUP: (data) => ({ data }),
     SIGNUP_RESPONSE: (success) => ({ success }),
 

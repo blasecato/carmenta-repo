@@ -27,6 +27,16 @@ function* signup({ payload }) {
   }
 }
 
+function* getUser({ payload }) {
+    const response = yield Api.get(`/persona/getUser/${payload.email}`)
+    if (response.ok) {
+      yield put(auth.getUserResponse(response.payload));
+    } else {
+      const err = new TypeError('ERROR_GET_PERSON')
+      yield put(auth.getUserResponse(err))
+    }
+}
+
 function* logout() {
   localStorage.removeItem('token');
 }
@@ -34,6 +44,7 @@ function* logout() {
 function* ActionWatcher() {
   yield takeLatest(auth.login, login)
   yield takeLatest(auth.signup, signup)
+  yield takeLatest(auth.getUser, getUser)
   yield takeLatest(auth.logout, logout)
 }
 

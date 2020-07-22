@@ -5,7 +5,8 @@ export const INITIAL_STATE = {
   authentication: Token.isTokenValid(),
   loading: false,
   error: false,
-  success: false
+  success: false,
+  user:[]
 }
 
 const reducer = handleActions({
@@ -17,6 +18,16 @@ const reducer = handleActions({
       },
       throw(state, { error, payload: { message } }) {
         return { ...state, error, message }
+      }
+    },
+
+    GET_USER: (state, { payload: { } }) => ({ ...state, loading: true }),
+    GET_USER_RESPONSE: {
+      next(state, { payload: { user } }) {
+        return { ...state, user }
+      },
+      throw(state, action) {
+        return { ...state }
       }
     },
 
