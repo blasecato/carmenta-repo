@@ -5,12 +5,12 @@ import { Tabs } from 'antd'
 
 const { TabPane } = Tabs;
 
-export const Auth = ({ location }) => {
+export const Auth = ({ location,history }) => {
   
   return (
     <div>
-      {location.pathname !== '/login-admin' && <LoginDealer />}
-      {location.pathname === '/login-admin' && <LoginBackoffice/>}
+      {location.pathname !== '/login-admin' && <LoginDealer history={history} />}
+      {location.pathname === '/login-admin' && <LoginBackoffice history={history} />}
       
     </div>
   )
