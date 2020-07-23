@@ -91,7 +91,7 @@ const Login = ({ form, rol, history,title }) => {
 						<Form.Item className="cont-btn">
 							<Button type="primary" htmlType="submit" className="login-form-button">
 								Iniciar Sesión
-        			</Button>
+        					</Button>
 						</Form.Item>
 					</Form>
 					<Link to="/sing-up">Regístrate</Link>

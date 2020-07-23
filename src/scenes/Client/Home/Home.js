@@ -36,7 +36,7 @@ export const Home = ({history}) => {
 			<div className="Container-cars">
 
 				<div className="content-box">
-					<h1>CONOCE NUESTRA FLOTA</h1>
+					<h1>CONOCE NUESTROS VEHICULOS</h1>
 
 					<div className="cars-grid">
 						<div className="single-car">
@@ -473,8 +473,11 @@ export const Home = ({history}) => {
 						</div>
 
 					</div>
+
+					
 				</div>
 			</div>
+			<Footer/>
 		</div>
 	);
 }
