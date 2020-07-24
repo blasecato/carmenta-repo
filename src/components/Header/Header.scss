@@ -14,8 +14,16 @@
         justify-content: space-around;
         box-shadow: 0px 10px 19px -14px rgba(0,0,0,1);
 
-        .logo img{
-            height: 70px;
+        .title-org{
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 800;
+            
+
+            h1{
+                color: #ffffff;
+            }
         }
 
         .nav-bar {

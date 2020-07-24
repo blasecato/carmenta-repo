@@ -91,5 +91,35 @@
         
     }
 
+
+    .categories-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+    }
+
+
+    .container-categories {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 25px;
+    }
+
+    .title-item-cat {
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    .img-item-cat {
+        width: 170px;
+    }
+
     
 }
