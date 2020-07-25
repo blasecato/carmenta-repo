@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { Button, Menu } from 'antd';
+import { Button, Menu, Input } from 'antd';
 import { useDispatch } from 'react-redux';
 import { auth } from '../../services/Auth/AuthActions';
 import logo from "../../assets/image/LogoRentautos.png";
-import { SettingOutlined } from '@ant-design/icons';
+import { LoginOutlined, CaretDownOutlined,CarOutlined, SettingOutlined,UserOutlined } from '@ant-design/icons';
 import { useSelector } from 'react-redux';
 
-
-
-
-
 const { SubMenu } = Menu;
+const { Search } = Input;
 
 export const Header = ({ history }) => {
 
-	
-	  const [current,setCurrent]= useState("") 
+	const [current, setCurrent] = useState("")
 
 	const handleClick = e => {
-		console.log('click ', e);
 		setCurrent(e.key);
+		if(e.key == "3"){
+			dispatch(auth.logout())
+			history.push("/")
+		}
 	};
-
-	
-
-
-
 
 	const { authentication, user } = useSelector(state => state.auth)
 	console.log(user)
@@ -38,65 +32,81 @@ export const Header = ({ history }) => {
 		history.push("/")
 	}
 
-
+	const handleSearch = (value) => {
+		console.log(value)
+	}
 
 	return (
 
-
-
-		<div className="SingUp">
-			<div className="header">
+		<div className="Header">
+			<div className="Header_content">
 				<div className="navigation">
 					<div className="logo">
-						<Link>
+						<Link to="/">
 							<div className="title-org">
-								<h1>RENTAutos</h1>
+								<h1>RENT<span className="aa">A</span><span className="mobil">UTOS</span></h1>
 							</div>
 						</Link>
 					</div>
-					<div className="nav-bar">
-						<Link>
-							Inicio
-						</Link>
-						<Link>
-							Servicios
-						</Link>
-						<Link>
-							Autos
-						</Link>
-						<Link>
-							Sobre nosotros
-						</Link>
-						<Link>
-							Contáctenos
-						</Link>
-
-						<Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-
-							<SubMenu icon={<SettingOutlined />} title="Mi cuenta">
-								<Menu.ItemGroup title="">
-									<Menu.Item key="setting:1">Perfil</Menu.Item>
-									<Menu.Item key="setting:2">Cerrar sesión</Menu.Item>
-									<Menu.Item key="setting:3">Configuración</Menu.Item>
-								</Menu.ItemGroup>
-
-							</SubMenu>
-						</Menu>
-
-
-						{authentication ?
-							<Button className="button" onClick={() => handleLogout()}>Cerrar sesión</Button>
-							:
-							<Link to="/login" className="login">
-								Ingresar
+					<div className="nav">
+						<div className="nav_search">
+							<Search
+								placeholder="Buscar Autos por marcas, categorias y mas..."
+								onSearch={handleSearch}
+								className="search"
+							/>
+						</div>
+						<div className="nav_menu-options">
+							<Link to="" className="link">
+								Categorías
 							</Link>
-						}
+							<Link to="" className="link">
+								Autos
+							</Link>
+							<Link to="" className="link">
+								Rentar
+							</Link>
+							<Link to="" className="link">
+								Ayuda/Contáctenos
+							</Link>
+							<Link to="" className="link">
+								Sobre nosotros.
+							</Link>
+						</div>
+					</div>
 
+					<div className="sign">
+						<div className="sign--up">
+							<CarOutlined className="icon"/> Disfruta tu viaje con la mejor comodidad.
+						</div>
+						<div className="sign--down">
+							{authentication ?
+								<>
+									<Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+										<SubMenu title="Mi cuenta" icon={<CaretDownOutlined />} >
+											<Menu.ItemGroup title="">
+												<Menu.Item key="1"><UserOutlined />Perfil</Menu.Item>
+												<Menu.Item key="2"><SettingOutlined />Configuración</Menu.Item>
+												<Menu.Item key="3"><LoginOutlined />Cerrar sesión</Menu.Item>
+											</Menu.ItemGroup>
+										</SubMenu>
+									</Menu>
+									<Button className="btn-l btn-prymary-ligth " onClick={() => handleLogout()}>Cerrar sesión</Button>
+								</>
+								:
+								<>
+									<Link to="/login" className="btn-prymary-ligth">
+										Ingresar
+									</Link>
+									<Link to="/sing-up" className="btn-prymary-ligth">
+										Registrarme
+									</Link>
+								</>
+							}
+						</div>
 					</div>
 				</div>
 			</div>
-
-
 		</div>
 	);
 }

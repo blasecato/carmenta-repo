@@ -1,2 +1,21 @@
 $primary: #1f2b2d;
 $primary-dark: #151c1d;
+
+.Header{
+    .btn-prymary-ligth{
+        background-color: #ffffff;
+        width: 120px;
+        text-align: center;
+        line-height: 30px;
+        height: 30px;
+        color: #23393d;
+        font-weight: 600;
+        border-radius: 2em;
+        font-family: 'Poppins', sans-serif;
+    }
+    .btn-l{
+        line-height: 0px !important;
+        width: 130px;
+    
+    }   
+}

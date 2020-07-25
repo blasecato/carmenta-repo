@@ -1,57 +1,115 @@
-
-
-
-.header {
-    display: flex;
+.Header{
     height: 100px;
-    justify-content: space-between;
     background-color: #23393d;
+    display: flex;
+    justify-content: center;
 
-    .navigation {
-        display: flex;
+    &_content {
         width: 100%;
-        align-items: center;
-        justify-content: space-around;
-        box-shadow: 0px 10px 19px -14px rgba(0,0,0,1);
-
-        .title-org{
+        display: flex;
+        background-color: transparent;
+        justify-content: space-between;
+        max-width: 1300px;
+    
+        .navigation {
             display: flex;
+            width: 100%;
             align-items: center;
-            font-size: 24px;
-            font-weight: 800;
-            
+            justify-content: space-around;
+    
+            .title-org{
+                display: flex;
+                align-items: center;
+                font-size: 24px;
+                font-weight: 800;
+                
+    
+                h1{
+                    color: #ffffff;
+                    font-size: 38px;
+                    margin: 0;
+                    font-weight: 600;
+                    .aa {
+                        color: #a17a7a;
+                    }
+                    .mobil {
+                        color: #914c4c;
+                    }
+                }
+            }
+    
+            .nav {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 50%;
+                justify-content: space-between;
+                font-size: 14px;
+                font-weight: 600;
+                height: 100%;
+    
+                &_search{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 50px;
+    
+                    span.ant-input-search.search.ant-input-affix-wrapper {
+                        border-radius: 0;
+                    }
+    
+                }
+                
+                &_menu-options{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 50px;
+                }
+            }
+    
+            .link {
+                color:#ffffff ;
+                text-transform: uppercase;
+                font-weight: 350;
+                font-size: 12px;
+            }
+            .sign{
+                height: 100%;
 
-            h1{
-                color: #ffffff;
+                &--up {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 15px;
+                    font-weight: 500;
+                    height: 50px;
+                    color: #ffffff;
+                    .icon {
+                        font-size: 24px;
+                        margin-right: 10px;
+                    }
+                }
+                &--down {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 50px;
+                }
+                .ant-menu-horizontal {
+                    line-height: 26px;
+                    border: 0;
+                    border-radius: 0px;
+                    color: #23393d;
+                    font-weight: 600;
+                    padding-top: 3px;
+                }
             }
         }
-
-        .nav-bar {
-            display: flex;
-            align-items: center;
-            width: 60%;
-            justify-content: space-between;
-            font-size: 14px;
-            font-weight: 600;
-            
-        }
-
-        a{
-            color:#ffffff ;
-            text-transform: uppercase;
-        }
-
-        .login{
-            background-color: #ffffff;
-            width: 100px;
-            text-align: center;
-            line-height: 30px;
-            height: 30px;
-            color: #23393d;
-            border-radius: 2em;
-            font-family: 'Poppins', sans-serif;
-        }
+    
     }
-
+    
 }
 
