@@ -7,17 +7,20 @@
         width: 100%;
     }
 
-    .content-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
+    .Container-cars{
 
-        h1 {
-            font-size: 30px;
-            font-weight: 700;
-            padding-top: 20px;
+        &_content-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+
+            h1 {
+                font-size: 30px;
+                font-weight: 700;
+                padding-top: 20px;
+            }
         }
     }
 

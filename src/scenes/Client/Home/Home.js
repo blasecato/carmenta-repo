@@ -1,15 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Icon, Input, Button, Spin, notification, Alert, Checkbox } from 'antd';
+import { Form, Icon, Input, Button, Spin, notification, Alert, Checkbox, Empty } from 'antd';
 import { UserOutlined, LockOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 import Banner from "../../../assets/image/banner-home.jpg";
 import Picanto from "../../../assets/image/kia-picanto.jpg";
+
 import Automovil from "../../../assets/image/bmw-cat.png";
 import Camionetas from "../../../assets/image/lr-cat.png";
 import Pasajeros from "../../../assets/image/van-cat.png";
 import Camion from "../../../assets/image/camion-cat.png";
 import Lujosos from "../../../assets/image/mustang-cat.png";
+
+import LogoBMW from "../../../assets/image/logo-bmw.png";
+// import LogoAudi from "../../../assets/image/mustang-cat.png";
+// import LogoChevrolet from "../../../assets/image/mustang-cat.png";
+// import LogoFord from "../../../assets/image/mustang-cat.png";
+// import LogoHyundai from "../../../assets/image/mustang-cat.png";
+// import LogoKia from "../../../assets/image/mustang-cat.png";
+// import LogoMazda from "../../../assets/image/mustang-cat.png";
+// import LogoMercedes from "../../../assets/image/mustang-cat.png";
+// import LogoNissan from "../../../assets/image/mustang-cat.png";
+// import LogoRenault from "../../../assets/image/mustang-cat.png";
+// import LogoVolkswagen from "../../../assets/image/mustang-cat.png";
+// import LogoToyota from "../../../assets/image/mustang-cat.png";
+
+
 
 import { auth } from '../../../services/Auth/AuthActions';
 import { Header } from '../../../components/Header/Header';
@@ -29,32 +45,65 @@ export const Home = ({ history }) => {
 	const dummyVehiculos = [
 		{
 			id: 1, name: "Kia Picanto", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 2, name: "ford", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 3, name: "Kia Rio", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 4, name: "hynday", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 5, name: "audi", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 6, name: "gipeta", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 7, name: "camioneta", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 8, name: "zorra", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 9, name: "aveo", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 10, name: "ferrary", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 11, name: "lambord", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		},{
+		}, {
 			id: 12, name: "carro", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
 		}
-		
+
 	]
-console.log(dummyVehiculos)
+	console.log(dummyVehiculos)
+
+	const dummyMarcas = [
+		{
+			id: 1, brand:"Audi", image: Automovil,
+		}, {
+			id: 2, brand:"BMW", image: "url",
+		},{
+			id: 3, brand:"Chevrolet", image: "url",
+		},{
+			id: 4, brand:"Ford", image: "url",
+		},{
+			id: 5, brand:"KIA", image: "url",
+		},{
+			id: 6, brand:"Mazda", image: "url",
+		},{
+			id: 7, brand:"Renault", image: "url",
+		},{
+			id: 8, brand:"Toyota", image: "url",
+		},{
+			id: 9, brand:"Volskwagen", image: "url",
+		},{
+			id: 10, brand:"Hyundai", image: "url",
+		},{
+			id: 11, brand:"Mercedes Benz", image: "url",
+		},{
+			id: 12, brand:"Nissan", image: "url",
+		},
+
+	]
+	console.log(dummyMarcas)
+
+
+
 	return (
 
 
@@ -69,7 +118,7 @@ console.log(dummyVehiculos)
 
 			<div className="Container-cars">
 
-				<div className="content-box">
+				<div className="Container-cars_content-box">
 					<h1>CONOCE NUESTROS VEHICULOS</h1>
 
 					<div className="cars-grid">
@@ -115,432 +164,9 @@ console.log(dummyVehiculos)
 							</>
 							:
 							<div className="content-bottom">
-								no hay
+								<Empty />
 							</div>
 						}
-
-						{/* <div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-									</div>
-								</div>
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-								</div>
-							</Link>
-						</div> */}
-
-
-						{/* <div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-
-								</div>
-
-							</Link>
-
-						</div>
-
-
-
-						<div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-
-								</div>
-
-							</Link>
-
-						</div>
-
-
-
-						<div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-
-								</div>
-
-							</Link>
-
-						</div>
-
-
-						<div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-
-								</div>
-
-							</Link>
-
-						</div>
-
-						<div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-
-								</div>
-
-							</Link>
-
-						</div>
-
-
-						<div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-
-								</div>
-
-							</Link>
-
-						</div>
-
-
-						<div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-
-								</div>
-
-							</Link>
-
-						</div> */}
-
-
-						{/* 
-						<div className="single-car">
-							<Link className="box-car">
-								<div className="content-top">
-									<div className="content-top-left">
-										<div className="model-car">
-											<h3>Kia Picanto</h3>
-										</div>
-
-										<div className="price">
-											<span>"90.000"/Dia</span>
-										</div>
-									</div>
-
-									<div className="content-top-right">
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>5 Puestos</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aut.</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Radio USB</span>
-										</div>
-
-										<div className="car-features">
-											<CheckCircleOutlined />
-											<span>Aire:SI</span>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div className="content-bottom">
-									<img className="picanto" src={Picanto} />
-
-								</div>
-
-							</Link>
-
-						</div> */}
-
 					</div>
 
 				</div>
@@ -612,7 +238,19 @@ console.log(dummyVehiculos)
 
 			</div>
 
+			<div className="brands">
+				<div className="brands_container-title">
+					<h2>CONOCE NUESTRAS MARCAS</h2>
+				</div>
+				<div className="brands_container-logos">
+					<div className="logo-brand">
+						<div className="img-logo-brand">
 
+						</div>
+					</div>
+				</div>
+
+			</div>
 
 			<Footer />
 		</div>
