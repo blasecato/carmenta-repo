@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Form, Icon, Input, Button, Spin, notification, Alert, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { auth } from '../../../services/Auth/AuthActions'
-import {useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { Link } from "react-router-dom";
 import linkedin from "../../../assets/image/in.png";
@@ -10,9 +10,9 @@ import facebook from "../../../assets/image/facebook.png";
 import twitter from "../../../assets/image/twitter.png";
 import gmail from "../../../assets/image/gmas.png";
 
-const Login = ({ form, rol, history,title }) => {
-	
-	const { login ,getUser } = auth;
+const Login = ({ form, rol, history, title }) => {
+
+	const { login, getUser } = auth;
 	const dispatch = useDispatch()
 
 	const onFinish = values => {
@@ -26,11 +26,15 @@ const Login = ({ form, rol, history,title }) => {
 
 	return (
 		<div className="Login">
+			<Button onClick={()=> history.push("/")} className="home-back">
+				Inicio
+        	</Button>
 
 			<div className="circle-top">
 				<div className="circle-dow"></div>
 			</div>
 
+			
 			<div className="circle-bottom">
 				<div className="circle-dow2"></div>
 			</div>
@@ -51,7 +55,7 @@ const Login = ({ form, rol, history,title }) => {
 							:
 							<span>
 								La mejor empresa para alquilar un auto en temporadas vacacionales
-							</span>							
+							</span>
 						}
 					</div>
 
@@ -123,16 +127,16 @@ const Login = ({ form, rol, history,title }) => {
 							</Link>
 						</div>
 					</div>
- 
+
 				</div>
 				<div className="Login_content--box2 box">
 					<div className="Login_content--box2--title">
 						Renta tu Auto Ahora
 					</div>
 					<div className="Login_content--box2--slogan">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
 					</div>
-        </div>
+				</div>
 			</div>
 		</div>
 	);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Icon, Input, Button, Spin, notification, Alert, Checkbox, Select, DatePicker } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { UserOutlined, LockOutlined,BookOutlined,PhoneOutlined,EnvironmentOutlined, MailOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { auth } from '../../../services/Auth/AuthActions'
@@ -74,7 +74,7 @@ export const SingUp = ({ form,history }) => {
 							rules={[{ required: true, message: 'Por favor ingrese su correo electronico.' }]}
 						>
 							{/* <label className="item--label">Correo Electrónico:</label> */}
-							<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Correo electrónico" />
+							<Input prefix={<MailOutlined className="site-form-item-icon" />} placeholder="Correo electrónico" />
 						</Form.Item>
 						<Form.Item
 							className="item"
@@ -107,7 +107,7 @@ export const SingUp = ({ form,history }) => {
 						>
 							{/* <label className="item--label">Numero de documento:</label> */}
 							<Input
-								prefix={<LockOutlined className="site-form-item-icon" />}
+								prefix={<BookOutlined className="site-form-item-icon" />}
 								type="number"
 								placeholder="Numero de documento"
 							/>
@@ -119,7 +119,7 @@ export const SingUp = ({ form,history }) => {
 						>
 							{/* <label className="item--label">Telefono:</label> */}
 							<Input
-								prefix={<LockOutlined className="site-form-item-icon" />}
+								prefix={<PhoneOutlined className="site-form-item-icon" />}
 								type="number"
 								placeholder="Telefono"
 							/>
@@ -131,7 +131,7 @@ export const SingUp = ({ form,history }) => {
 						>
 							{/* <label className="item--label">Direccion:</label> */}
 							<Input
-								prefix={<LockOutlined className="site-form-item-icon" />}
+								prefix={<EnvironmentOutlined className="site-form-item-icon" />}
 								type="text"
 								placeholder="Dirección"
 							/>
