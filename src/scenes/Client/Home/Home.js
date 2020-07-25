@@ -5,6 +5,11 @@ import { useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 import Banner from "../../../assets/image/banner-home.jpg";
 import Picanto from "../../../assets/image/kia-picanto.jpg";
+import Automovil from "../../../assets/image/bmw-cat.png";
+import Camionetas from "../../../assets/image/lr-cat.png";
+import Pasajeros from "../../../assets/image/van-cat.png";
+import Camion from "../../../assets/image/camion-cat.png";
+import Lujosos from "../../../assets/image/mustang-cat.png";
 
 import { auth } from '../../../services/Auth/AuthActions';
 import { Header } from '../../../components/Header/Header';
@@ -65,7 +70,7 @@ console.log(dummyVehiculos)
 			<div className="Container-cars">
 
 				<div className="content-box">
-					<h1>CONOCE NUESTRA FLOTA</h1>
+					<h1>CONOCE NUESTROS VEHICULOS</h1>
 
 					<div className="cars-grid">
 						{dummyVehiculos && dummyVehiculos.length > 0 ?
@@ -190,7 +195,7 @@ console.log(dummyVehiculos)
 								</div>
 
 								<div className="content-bottom">
-								<img className="picanto" src={Picanto} />
+									<img className="picanto" src={Picanto} />
 
 								</div>
 
@@ -239,7 +244,7 @@ console.log(dummyVehiculos)
 								</div>
 
 								<div className="content-bottom">
-								<img className="picanto" src={Picanto} />
+									<img className="picanto" src={Picanto} />
 
 								</div>
 
@@ -288,7 +293,7 @@ console.log(dummyVehiculos)
 								</div>
 
 								<div className="content-bottom">
-								<img className="picanto" src={Picanto} />
+									<img className="picanto" src={Picanto} />
 
 								</div>
 
@@ -336,7 +341,7 @@ console.log(dummyVehiculos)
 								</div>
 
 								<div className="content-bottom">
-								<img className="picanto" src={Picanto} />
+									<img className="picanto" src={Picanto} />
 
 								</div>
 
@@ -383,7 +388,7 @@ console.log(dummyVehiculos)
 								</div>
 
 								<div className="content-bottom">
-								<img className="picanto" src={Picanto} />
+									<img className="picanto" src={Picanto} />
 
 								</div>
 
@@ -431,14 +436,14 @@ console.log(dummyVehiculos)
 								</div>
 
 								<div className="content-bottom">
-								<img className="picanto" src={Picanto} />
+									<img className="picanto" src={Picanto} />
 
 								</div>
 
 							</Link>
 
 						</div>
-						
+
 
 						<div className="single-car">
 							<Link className="box-car">
@@ -479,7 +484,7 @@ console.log(dummyVehiculos)
 								</div>
 
 								<div className="content-bottom">
-								<img className="picanto" src={Picanto} />
+									<img className="picanto" src={Picanto} />
 
 								</div>
 
@@ -528,7 +533,7 @@ console.log(dummyVehiculos)
 								</div>
 
 								<div className="content-bottom">
-								<img className="picanto" src={Picanto} />
+									<img className="picanto" src={Picanto} />
 
 								</div>
 
@@ -537,8 +542,79 @@ console.log(dummyVehiculos)
 						</div> */}
 
 					</div>
+
 				</div>
 			</div>
+
+			<div className="categories-box">
+				<div className="categories-title">
+					<h2>CATEGORIAS</h2>
+				</div>
+
+				<div className="container-categories">
+
+					<Link>
+						<div className="item-cat">
+							<div className="title-item-cat">
+								<h3>Automóviles</h3>
+							</div>
+							<div className="item-cat-icon">
+								<img className="img-item-cat" src={Automovil} />
+							</div>
+						</div>
+					</Link>
+
+					<Link>
+						<div className="item-cat">
+							<div className="title-item-cat">
+								<h3>Camionetas</h3>
+							</div>
+							<div className="item-cat-icon">
+								<img className="img-item-cat" src={Camionetas} />
+							</div>
+						</div>
+					</Link>
+
+					<Link>
+						<div className="item-cat">
+							<div className="title-item-cat">
+								<h3>Vans - Pasajeros</h3>
+							</div>
+							<div className="item-cat-icon">
+								<img className="img-item-cat" src={Pasajeros} />
+							</div>
+						</div>
+					</Link>
+
+					<Link>
+						<div className="item-cat">
+							<div className="title-item-cat">
+								<h3>Camiones</h3>
+							</div>
+							<div className="item-cat-icon">
+								<img className="img-item-cat" src={Camion} />
+							</div>
+						</div>
+					</Link>
+
+					<Link>
+						<div className="item-cat">
+							<div className="title-item-cat">
+								<h3>Lujosos</h3>
+							</div>
+							<div className="item-cat-icon">
+								<img className="img-item-cat" src={Lujosos} />
+							</div>
+						</div>
+					</Link>
+				</div>
+
+
+			</div>
+
+
+
+			<Footer />
 		</div>
 	);
 }

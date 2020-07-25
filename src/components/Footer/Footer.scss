@@ -1,0 +1,79 @@
+.Footer {
+    background-color: #23393d;
+    color: #ffffff;
+
+    h2{
+        color: #ffffff;
+        
+    }
+
+    h3{
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+    .ftr-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+
+        .ftr-box-left {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+
+            .send-msg-ftr {
+                display: flex;
+                flex-direction: column;
+            }
+
+            button.ant-btn.msg-form-button.ant-btn-primary {
+                width: 80%;
+                margin: auto;
+            }
+        
+        }
+
+        .ftr-box-mid {
+            display: flex;
+            width: 30%;
+            justify-content: center;
+
+            .social-media {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+
+                .social-media-title {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .media-icons {
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 30px;
+
+                    .icon {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+        .ftr-box-right {
+            display: flex;
+            width: 30%;
+        }
+        
+    }
+
+    .ftr-bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 30px;
+    }
+
+
+}
