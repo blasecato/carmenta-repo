@@ -108,8 +108,25 @@
                 }
             }
         }
-    
+        .btn-car {
+            background-color: transparent;
+            font-size: 30px;
+            padding: 0;
+            color: #ffffff;
+            border-color: transparent;
+            height: 100%;
+            font-weight: 600;
+        }
+        .ant-btn:active {
+            color: #ffffff;
+            background: transparent;
+            border-color: transparent;
+        }
+        .ant-btn:hover, .ant-btn:focus {
+            color: #ffffff;
+            background: transparent;
+            border-color: transparent;
+        }
     }
-    
 }
 

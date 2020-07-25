@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Icon, Input, Button, Spin, notification, Alert, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import { auth } from '../../../services/Auth/AuthActions'
 import { useSelector, useDispatch } from 'react-redux'
+import { auth } from '../../../services/Auth/AuthActions'
+import { user as userActions , user } from '../../../services/User/UserActions'
 
 import { Link } from "react-router-dom";
 import linkedin from "../../../assets/image/in.png";
@@ -13,17 +14,19 @@ import gmail from "../../../assets/image/gmas.png";
 const Login = ({ form, rol, history, title }) => {
 
 	const { login, getUser } = auth;
+	const { users } = useSelector(state => state.user)
 	const dispatch = useDispatch()
 
 	const onFinish = values => {
 		if (values) {
 			dispatch(login(values.email, values.password))
 			history.push('/home-log')
-			// dispatch(getUser(values.email))
+			dispatch(userActions.getUser(values.email))
 			console.log(values.email)
 		}
 	};
 
+	console.log(users)
 	return (
 		<div className="Login">
 			<Button onClick={()=> history.push("/")} className="home-back">

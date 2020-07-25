@@ -10,6 +10,10 @@
     }
 
     .Container-cars{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &_content-box {
             display: flex;
@@ -17,6 +21,7 @@
             justify-content: center;
             align-items: center;
             padding: 30px;
+            width: 1300px;
 
             h1 {
                 font-size: 30px;

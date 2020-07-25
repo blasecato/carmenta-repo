@@ -1,19 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Button, Menu, Input } from 'antd';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { auth } from '../../services/Auth/AuthActions';
+import { user as userActions , user } from '../../services/User/UserActions'
 import logo from "../../assets/image/LogoRentautos.png";
-import { LoginOutlined, CaretDownOutlined,CarOutlined, SettingOutlined,UserOutlined } from '@ant-design/icons';
-import { useSelector } from 'react-redux';
+import { LoginOutlined, CaretDownOutlined, CarOutlined, SettingOutlined, UserOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 const { Search } = Input;
 
 export const Header = ({ history }) => {
 
+	const dispatch = useDispatch()
+	const { authentication, user } = useSelector(state => state.auth)
+	const { users } = useSelector(state => state.user)
 	const [current, setCurrent] = useState("")
+	const [email,setEmail] = useState(users.email)
 
+	useEffect(() => {
+		if(users){
+			setEmail(users.email)
+		}
+	}, [])
+		
+	console.log(users,"sxfsdfsd")
+	console.log(email,"sxfsdfsd")
+	
 	const handleClick = e => {
 		setCurrent(e.key);
 		if(e.key == "3"){
@@ -21,11 +34,6 @@ export const Header = ({ history }) => {
 			history.push("/")
 		}
 	};
-
-	const { authentication, user } = useSelector(state => state.auth)
-	console.log(user)
-
-	const dispatch = useDispatch()
 
 	const handleLogout = () => {
 		dispatch(auth.logout())
@@ -91,7 +99,7 @@ export const Header = ({ history }) => {
 											</Menu.ItemGroup>
 										</SubMenu>
 									</Menu>
-									<Button className="btn-l btn-prymary-ligth " onClick={() => handleLogout()}>Cerrar sesión</Button>
+									<Button className="btn-car"><ShoppingCartOutlined /></Button>
 								</>
 								:
 								<>

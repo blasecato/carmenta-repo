@@ -26,7 +26,7 @@ import LogoBMW from "../../../assets/image/logo-bmw.png";
 // import LogoToyota from "../../../assets/image/mustang-cat.png";
 
 
-
+import { useSelector } from 'react-redux'
 import { auth } from '../../../services/Auth/AuthActions';
 import { Header } from '../../../components/Header/Header';
 import { Footer } from '../../../components/Footer/Footer';
@@ -36,12 +36,12 @@ import { Footer } from '../../../components/Footer/Footer';
 export const Home = ({ history }) => {
 
 	const dispatch = useDispatch()
-
+	
 	const handleLogout = () => {
 		dispatch(auth.logout())
-
 	}
 
+	
 	const dummyVehiculos = [
 		{
 			id: 1, name: "Kia Picanto", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
