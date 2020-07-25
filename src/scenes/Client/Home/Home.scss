@@ -97,6 +97,14 @@
         
     }
 
+    .categories-box {
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #ffffff;
+    }
+
 
     .categories-title {
         display: flex;
@@ -125,6 +133,51 @@
 
     .img-item-cat {
         width: 170px;
+    }
+
+    .brands {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 200px;
+
+        &_container-title {
+            display: flex;
+            justify-content: center;
+
+            h2 {
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+
+        &_content {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .image-brand {
+            width: 50px;
+        }
+
+        .logo-brand {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 85px;
+            align-items: center;
+
+            &-img {
+                display: flex;
+                margin: auto;
+            }
+
+            .title-brand {
+                display: flex;
+                align-items: center;
+            }
+        }
     }
 
     

@@ -6,31 +6,30 @@ import { Link } from "react-router-dom";
 import Banner from "../../../assets/image/banner-home.jpg";
 import Picanto from "../../../assets/image/kia-picanto.jpg";
 
+//CATEGORIES
 import Automovil from "../../../assets/image/bmw-cat.png";
 import Camionetas from "../../../assets/image/lr-cat.png";
 import Pasajeros from "../../../assets/image/van-cat.png";
 import Camion from "../../../assets/image/camion-cat.png";
 import Lujosos from "../../../assets/image/mustang-cat.png";
 
+//BRANDS CARS
+import LogoAudi from "../../../assets/image/logo-audi.png";
 import LogoBMW from "../../../assets/image/logo-bmw.png";
-// import LogoAudi from "../../../assets/image/mustang-cat.png";
-// import LogoChevrolet from "../../../assets/image/mustang-cat.png";
-// import LogoFord from "../../../assets/image/mustang-cat.png";
-// import LogoHyundai from "../../../assets/image/mustang-cat.png";
-// import LogoKia from "../../../assets/image/mustang-cat.png";
-// import LogoMazda from "../../../assets/image/mustang-cat.png";
-// import LogoMercedes from "../../../assets/image/mustang-cat.png";
-// import LogoNissan from "../../../assets/image/mustang-cat.png";
-// import LogoRenault from "../../../assets/image/mustang-cat.png";
-// import LogoVolkswagen from "../../../assets/image/mustang-cat.png";
-// import LogoToyota from "../../../assets/image/mustang-cat.png";
-
-
+import LogoChevrolet from "../../../assets/image/logo-chevrolet.png";
+import LogoFord from "../../../assets/image/logo-ford.png";
+import LogoHyundai from "../../../assets/image/logo-hyundai.png";
+import LogoKia from "../../../assets/image/logo-kia.png";
+import LogoMazda from "../../../assets/image/logo-mazda.png";
+import LogoMercedes from "../../../assets/image/logo-mercedes-benz.png";
+import LogoNissan from "../../../assets/image/logo-nissan.png";
+import LogoRenault from "../../../assets/image/logo-renault.png";
+import LogoToyota from "../../../assets/image/logo-toyota.png";
+import LogoVolkswagen from "../../../assets/image/logo-volkswagen.png";
 
 import { auth } from '../../../services/Auth/AuthActions';
 import { Header } from '../../../components/Header/Header';
 import { Footer } from '../../../components/Footer/Footer';
-
 
 
 export const Home = ({ history }) => {
@@ -74,29 +73,29 @@ export const Home = ({ history }) => {
 
 	const dummyMarcas = [
 		{
-			id: 1, brand:"Audi", image: Automovil,
+			id: 1, brand: "Audi", image: LogoAudi,
 		}, {
-			id: 2, brand:"BMW", image: "url",
-		},{
-			id: 3, brand:"Chevrolet", image: "url",
-		},{
-			id: 4, brand:"Ford", image: "url",
-		},{
-			id: 5, brand:"KIA", image: "url",
-		},{
-			id: 6, brand:"Mazda", image: "url",
-		},{
-			id: 7, brand:"Renault", image: "url",
-		},{
-			id: 8, brand:"Toyota", image: "url",
-		},{
-			id: 9, brand:"Volskwagen", image: "url",
-		},{
-			id: 10, brand:"Hyundai", image: "url",
-		},{
-			id: 11, brand:"Mercedes Benz", image: "url",
-		},{
-			id: 12, brand:"Nissan", image: "url",
+			id: 2, brand: "BMW", image: LogoBMW,
+		}, {
+			id: 3, brand: "Chevrolet", image: LogoChevrolet,
+		}, {
+			id: 4, brand: "Ford", image: LogoFord,
+		}, {
+			id: 5, brand: "KIA", image: LogoKia,
+		}, {
+			id: 6, brand: "Mazda", image: LogoMazda,
+		}, {
+			id: 7, brand: "Renault", image: LogoRenault,
+		}, {
+			id: 8, brand: "Toyota", image: LogoToyota,
+		}, {
+			id: 9, brand: "Volskwagen", image: LogoVolkswagen,
+		}, {
+			id: 10, brand: "Hyundai", image: LogoHyundai,
+		}, {
+			id: 11, brand: "Mercedes Benz", image: LogoMercedes,
+		}, {
+			id: 12, brand: "Nissan", image: LogoNissan,
 		},
 
 	]
@@ -173,6 +172,7 @@ export const Home = ({ history }) => {
 			</div>
 
 			<div className="categories-box">
+
 				<div className="categories-title">
 					<h2>CATEGORIAS</h2>
 				</div>
@@ -239,16 +239,36 @@ export const Home = ({ history }) => {
 			</div>
 
 			<div className="brands">
+
 				<div className="brands_container-title">
 					<h2>CONOCE NUESTRAS MARCAS</h2>
 				</div>
-				<div className="brands_container-logos">
-					<div className="logo-brand">
-						<div className="img-logo-brand">
 
+				<div className="brands_content">
+
+					{dummyMarcas && dummyMarcas.map((data, index) =>
+
+						<div key={index} className="brands_container-logos">
+
+							{/* Falta LINK */}
+							<div className="logo-brand">
+
+								<div className="logo-brand-img">
+									<img className="image-brand" src={data.image} />
+								</div>
+
+								<div className="title-brand">
+									<h3>{data.brand}</h3>
+								</div>
+
+							</div>
 						</div>
-					</div>
+					)}
+
+
 				</div>
+
+
 
 			</div>
 
