@@ -52,23 +52,23 @@ export const Header = ({ history }) => {
 					<div className="logo">
 						<Link to="/">
 							<div className="title-org">
-								<h1>RENT<span className="aa">A</span><span className="mobil">UTOS</span></h1>
+								<h1 className="animate__animated animate__bounceInLeft">RENT<span className="aa">A</span><span className="mobil">UTOS</span></h1>
 							</div>
 						</Link>
 					</div>
 					<div className="nav">
-						<div className="nav_search">
+						<div className="nav_search animate__animated animate__bounceInDown">
 							<Search
 								placeholder="Buscar Autos por marcas, categorias y mas..."
 								onSearch={handleSearch}
 								className="search"
 							/>
 						</div>
-						<div className="nav_menu-options">
+						<div className="nav_menu-options animate__animated animate__bounceInUp">
 							<Link to="" className="link">
 								Categorías
 							</Link>
-							<Link to="" className="link">
+							<Link to="/store" className="link">
 								Autos
 							</Link>
 							<Link to="" className="link">
@@ -83,7 +83,7 @@ export const Header = ({ history }) => {
 						</div>
 					</div>
 
-					<div className="sign">
+					<div className="sign animate__animated animate__bounceInRight">
 						<div className="sign--up">
 							<CarOutlined className="icon"/> Disfruta tu viaje con la mejor comodidad.
 						</div>

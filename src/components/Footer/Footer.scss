@@ -1,21 +1,26 @@
+.content-footer {
+ width: 100%;
+ height: auto;
+ display: flex;
+ justify-content: center;
+ background-color: #23393d;
 .Footer {
     background-color: #23393d;
     color: #ffffff;
-
+    width: 100%;
+    max-width: 1400px;
     h2{
         color: #ffffff;
-        
     }
-
     h3{
         color: #ffffff;
         font-weight: 400;
     }
-
     .ftr-top {
         display: flex;
         justify-content: space-between;
         padding: 20px 30px;
+        align-items: center;
 
         .ftr-box-left {
             display: flex;
@@ -25,55 +30,60 @@
             .send-msg-ftr {
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                min-height: 174px;
+                input {
+                    margin-bottom: 16px;
+                    height: 35px;
+                    border: 0;
+                    padding: 10px;
+                }
             }
-
             button.ant-btn.msg-form-button.ant-btn-primary {
-                width: 80%;
+                width: 100%;
                 margin: auto;
-            }
-        
+                height: 40px;
+            }  
         }
 
         .ftr-box-mid {
             display: flex;
             width: 30%;
             justify-content: center;
-
             .social-media {
                 display: flex;
                 flex-direction: column;
                 width: 50%;
-
-                .social-media-title {
+                &-title {
                     display: flex;
                     justify-content: center;
+                    margin-bottom: 20px;
                 }
-
                 .media-icons {
                     display: flex;
                     justify-content: space-around;
                     font-size: 30px;
-
-                    .icon {
+                   .icon {
                         display: flex;
                         justify-content: space-between;
                     }
                 }
             }
         }
-
         .ftr-box-right {
             display: flex;
             width: 30%;
         }
         
     }
-
     .ftr-bottom {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         padding: 0px 30px;
     }
-
-
+    .copyright-section-l {
+        margin-right: 10px;
+    }
+}
 }

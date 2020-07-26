@@ -6,7 +6,7 @@ export const LoginDealer = ({history}) => {
 
   return (  
     <div>
-      <Login rol={'dealer'} title="Cliente" history={history}/>
+      <Login rol={'cliente'} title="Cliente" history={history}/>
     </div>
   )
 }

@@ -42,31 +42,28 @@
     .single-car {
         display: flex;
         width: 330px;
-        background-color: white;
+        background-color: #ffffff;
         margin-bottom: 30px;
-        box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        transition: 1s;
+        cursor: pointer;
 
         a.box-car {
             width: 100%;
         }
-
         .content-top {
             display: flex;
             justify-content: space-around;
             padding: 20px 0 0 0;
         }
-
         .model-car {
-            margin-bottom: 10px;
-        
+            margin-bottom: 10px;   
             h3 {
                 font-size: 20px;
                 font-weight: 600;
                 color: #23393d;
-            }
-        
+            }      
         }
-
         .price {
             display: flex;
             background-color: #23393d;
@@ -74,32 +71,61 @@
             justify-content: center;
             align-items: center;
             width: 115px;
-
+            transition: 1s;
             span{
                 color: #ffffff;
             }
         }
-
         span.anticon.anticon-check-circle {
             margin-right: 10px;
             color: #23393d;
         }
-
         .car-features span {
             color: #23393d;
         }
-
         .content-bottom {
             display: flex;
             justify-content: center;
             padding: 20px;
-
             img.picanto {
                 width: 280px;
             }
-        }
+        }       
+    }
 
-        
+    .single-car:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.336);
+        background-color: #23393d;
+        .price {
+            background-color: #ffffff ;
+            span{
+                font-weight: 600;
+                color: #23393d;
+            }
+        }
+        .model-car {
+            h3 {
+                color: #ffffff;
+            }
+        }
+        .car-features span {
+            color: #ffffff;
+        }
+        span.anticon.anticon-check-circle {
+            color: #ffffff;
+        }
+    }
+
+    .cuadrado {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        margin: 40px;
+        transition: 1s;
+    }
+    .cuadrado:hover {
+        transform: scale(1.1);
     }
 
     .categories-box {

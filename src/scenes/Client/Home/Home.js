@@ -36,71 +36,35 @@ export const Home = ({ history }) => {
 
 	const dispatch = useDispatch()
 	
-	const handleLogout = () => {
-		dispatch(auth.logout())
-	}
-
-	
 	const dummyVehiculos = [
-		{
-			id: 1, name: "Kia Picanto", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 2, name: "ford", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 3, name: "Kia Rio", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 4, name: "hynday", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 5, name: "audi", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 6, name: "gipeta", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 7, name: "camioneta", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 8, name: "zorra", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 9, name: "aveo", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 10, name: "ferrary", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 11, name: "lambord", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}, {
-			id: 12, name: "carro", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",
-		}
-
+		{id: 1, name: "Kia Picanto", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 2, name: "ford", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 3, name: "Kia Rio", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 4, name: "hynday", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 5, name: "audi", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 6, name: "gipeta", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 7, name: "camioneta", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 8, name: "zorra", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 9, name: "aveo", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 10, name: "ferrary", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 11, name: "lambord", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
+		{id: 12, name: "carro", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}
 	]
-	console.log(dummyVehiculos)
 
 	const dummyMarcas = [
-		{
-			id: 1, brand: "Audi", image: LogoAudi,
-		}, {
-			id: 2, brand: "BMW", image: LogoBMW,
-		}, {
-			id: 3, brand: "Chevrolet", image: LogoChevrolet,
-		}, {
-			id: 4, brand: "Ford", image: LogoFord,
-		}, {
-			id: 5, brand: "KIA", image: LogoKia,
-		}, {
-			id: 6, brand: "Mazda", image: LogoMazda,
-		}, {
-			id: 7, brand: "Renault", image: LogoRenault,
-		}, {
-			id: 8, brand: "Toyota", image: LogoToyota,
-		}, {
-			id: 9, brand: "Volskwagen", image: LogoVolkswagen,
-		}, {
-			id: 10, brand: "Hyundai", image: LogoHyundai,
-		}, {
-			id: 11, brand: "Mercedes Benz", image: LogoMercedes,
-		}, {
-			id: 12, brand: "Nissan", image: LogoNissan,
-		},
-
+		{id: 1, brand: "Audi", image: LogoAudi,}, 
+		{id: 2, brand: "BMW", image: LogoBMW,}, 
+		{id: 3, brand: "Chevrolet", image: LogoChevrolet,}, 
+		{id: 4, brand: "Ford", image: LogoFord,}, 
+		{id: 5, brand: "KIA", image: LogoKia,}, 
+		{id: 6, brand: "Mazda", image: LogoMazda,}, 
+		{id: 7, brand: "Renault", image: LogoRenault,}, 
+		{id: 8, brand: "Toyota", image: LogoToyota,}, 
+		{id: 9, brand: "Volskwagen", image: LogoVolkswagen,}, 
+		{id: 10, brand: "Hyundai", image: LogoHyundai,}, 
+		{id: 11, brand: "Mercedes Benz", image: LogoMercedes,}, 
+		{id: 12, brand: "Nissan", image: LogoNissan,}
 	]
-	console.log(dummyMarcas)
-
 
 
 	return (
@@ -108,24 +72,18 @@ export const Home = ({ history }) => {
 
 		<div className="Home">
 			<Header history={history} />
-
 			<div className="banner">
-
 				<img className="img-banner" src={Banner} />
-
 			</div>
-
 			<div className="Container-cars">
-
 				<div className="Container-cars_content-box">
 					<h1>CONOCE NUESTROS VEHICULOS</h1>
-
 					<div className="cars-grid">
 						{dummyVehiculos && dummyVehiculos.length > 0 ?
 							<>
 								{dummyVehiculos.map((item, index) =>
 									<div key={index} className="single-car">
-										<Link className="box-car">
+										<div className="box-car">
 											<div className="content-top">
 												<div className="content-top-left">
 													<div className="model-car">
@@ -157,7 +115,7 @@ export const Home = ({ history }) => {
 											<div className="content-bottom">
 												<img className="picanto" src={Picanto} />
 											</div>
-										</Link>
+										</div>
 									</div>
 								)}
 							</>
@@ -167,18 +125,13 @@ export const Home = ({ history }) => {
 							</div>
 						}
 					</div>
-
 				</div>
 			</div>
-
 			<div className="categories-box">
-
 				<div className="categories-title">
 					<h2>CATEGORIAS</h2>
 				</div>
-
 				<div className="container-categories">
-
 					<Link>
 						<div className="item-cat">
 							<div className="title-item-cat">
@@ -189,7 +142,6 @@ export const Home = ({ history }) => {
 							</div>
 						</div>
 					</Link>
-
 					<Link>
 						<div className="item-cat">
 							<div className="title-item-cat">
@@ -200,7 +152,6 @@ export const Home = ({ history }) => {
 							</div>
 						</div>
 					</Link>
-
 					<Link>
 						<div className="item-cat">
 							<div className="title-item-cat">
@@ -211,7 +162,6 @@ export const Home = ({ history }) => {
 							</div>
 						</div>
 					</Link>
-
 					<Link>
 						<div className="item-cat">
 							<div className="title-item-cat">
@@ -222,7 +172,6 @@ export const Home = ({ history }) => {
 							</div>
 						</div>
 					</Link>
-
 					<Link>
 						<div className="item-cat">
 							<div className="title-item-cat">
@@ -234,25 +183,16 @@ export const Home = ({ history }) => {
 						</div>
 					</Link>
 				</div>
-
-
 			</div>
-
 			<div className="brands">
-
 				<div className="brands_container-title">
 					<h2>CONOCE NUESTRAS MARCAS</h2>
 				</div>
-
 				<div className="brands_content">
-
 					{dummyMarcas && dummyMarcas.map((data, index) =>
-
 						<div key={index} className="brands_container-logos">
-
 							{/* Falta LINK */}
 							<div className="logo-brand">
-
 								<div className="logo-brand-img">
 									<img className="image-brand" src={data.image} />
 								</div>
@@ -260,18 +200,11 @@ export const Home = ({ history }) => {
 								<div className="title-brand">
 									<h3>{data.brand}</h3>
 								</div>
-
 							</div>
 						</div>
 					)}
-
-
 				</div>
-
-
-
 			</div>
-
 			<Footer />
 		</div>
 	);
