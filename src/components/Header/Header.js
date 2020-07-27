@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button, Menu, Input } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { auth } from '../../services/Auth/AuthActions';
-import { user as userActions , user } from '../../services/User/UserActions'
 import logo from "../../assets/image/LogoRentautos.png";
 import { LoginOutlined, CaretDownOutlined, CarOutlined, SettingOutlined, UserOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 
@@ -13,19 +12,9 @@ const { Search } = Input;
 export const Header = ({ history }) => {
 
 	const dispatch = useDispatch()
-	const { authentication, user } = useSelector(state => state.auth)
-	const { users } = useSelector(state => state.user)
 	const [current, setCurrent] = useState("")
-	const [email,setEmail] = useState(users.email)
+	const { authentication, user } = useSelector(state => state.auth)
 
-	useEffect(() => {
-		if(users){
-			setEmail(users.email)
-		}
-	}, [])
-		
-	console.log(users,"sxfsdfsd")
-	console.log(email,"sxfsdfsd")
 	
 	const handleClick = e => {
 		setCurrent(e.key);
@@ -34,11 +23,6 @@ export const Header = ({ history }) => {
 			history.push("/")
 		}
 	};
-
-	const handleLogout = () => {
-		dispatch(auth.logout())
-		history.push("/")
-	}
 
 	const handleSearch = (value) => {
 		console.log(value)
@@ -65,19 +49,19 @@ export const Header = ({ history }) => {
 							/>
 						</div>
 						<div className="nav_menu-options animate__animated animate__bounceInUp">
-							<Link to="" className="link">
+							<Link to="/" className="link">
 								Categorías
 							</Link>
 							<Link to="/store" className="link">
 								Autos
 							</Link>
-							<Link to="" className="link">
+							<Link to="/" className="link">
 								Rentar
 							</Link>
-							<Link to="" className="link">
+							<Link to="/" className="link">
 								Ayuda/Contáctenos
 							</Link>
-							<Link to="" className="link">
+							<Link to="/" className="link">
 								Sobre nosotros.
 							</Link>
 						</div>

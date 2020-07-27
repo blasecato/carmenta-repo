@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Icon, Input, Button, Spin, notification, Alert, Checkbox, Empty } from 'antd';
 import { UserOutlined, LockOutlined, CheckCircleOutlined } from '@ant-design/icons';
-import { useDispatch } from 'react-redux';
+import { useDispatch , useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import Banner from "../../../assets/image/banner-home.jpg";
 import Picanto from "../../../assets/image/kia-picanto.jpg";
@@ -34,7 +34,13 @@ import { Footer } from '../../../components/Footer/Footer';
 
 export const Home = ({ history }) => {
 
+	const { authentication, user } = useSelector(state => state.auth)
 	const dispatch = useDispatch()
+
+	const handleDetail = (id) => {
+		console.log(id)
+		history.push(`/detail-car/${id}`)
+	}
 	
 	const dummyVehiculos = [
 		{id: 1, name: "Kia Picanto", puestos: 5, automatico: "Aut", radio: "si", aire: "si", precio: "90.000", image: "url",}, 
@@ -66,6 +72,7 @@ export const Home = ({ history }) => {
 		{id: 12, brand: "Nissan", image: LogoNissan,}
 	]
 
+	console.log(authentication)
 
 	return (
 
@@ -82,7 +89,7 @@ export const Home = ({ history }) => {
 						{dummyVehiculos && dummyVehiculos.length > 0 ?
 							<>
 								{dummyVehiculos.map((item, index) =>
-									<div key={index} className="single-car">
+									<div key={index} className="single-car" onClick={() => handleDetail(item.id)}>
 										<div className="box-car">
 											<div className="content-top">
 												<div className="content-top-left">
@@ -115,6 +122,12 @@ export const Home = ({ history }) => {
 											<div className="content-bottom">
 												<img className="picanto" src={Picanto} />
 											</div>
+											{authentication &&
+												<div className="cont-btn">
+													<Button className="btn">Alquilar</Button>
+												</div>
+											}
+											
 										</div>
 									</div>
 								)}

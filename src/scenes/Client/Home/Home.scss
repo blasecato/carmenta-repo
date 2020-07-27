@@ -91,6 +91,17 @@
                 width: 280px;
             }
         }       
+        .cont-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            .btn {
+                border-radius: 0px;
+                background-color: #23393d;
+                color: #ffffff;
+            }
+        }
     }
 
     .single-car:hover {
@@ -114,6 +125,13 @@
         }
         span.anticon.anticon-check-circle {
             color: #ffffff;
+        }
+        .cont-btn {
+            .btn {
+                background-color: #ffffff;
+                font-weight: 600;
+                color: #23393d;
+            }
         }
     }
 

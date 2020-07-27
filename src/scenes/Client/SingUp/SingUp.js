@@ -94,7 +94,7 @@ export const SingUp = ({ form,history }) => {
 							rules={[{ required: true, message: 'Por favor ingrese su tipo documento.' }]}
 						>
 							{/* <label className="item--label">Tipo de documento:</label> */}
-							<Select defaultValue="Tipo de documento" onChange={handleChange}>
+							<Select placeholder="Tipo de Documento" onChange={handleChange}>
 								<Option value="1">Cedula de Ciudadania</Option>
 								<Option value="2">Cedula de Extranjeria</Option>
 								<Option value="3">Pasaporte</Option>
