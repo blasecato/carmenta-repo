@@ -1,0 +1,65 @@
+.container-vehicle {
+    padding: 10px;
+
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5%;
+
+        .carousel-imgs {
+            display: flex;
+            padding: 20px;
+        }
+
+        .imgs-mini {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 20px;
+
+        }
+
+        img.img-mini{
+            width: 100px;
+            display: flex;
+            margin-right: 10px;
+        }
+
+
+    }
+}
+
+
+.cuadro1{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+
+.cuadro2{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(128, 41, 0);
+}
+.cuadro3{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(45, 0, 128);
+}
+
+.mini1{
+    width: 80px;
+    height: 80px;
+    background-color: green;
+}
+
+.mini2{
+    width: 80px;
+    height: 80px;
+    background-color:  rgb(128, 41, 0);
+}
+
+.mini3{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(45, 0, 128);
+}
