@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import logo from "./assets/image/logo-c.png";
 import video from "./assets/image/paisaje.mp4";
 
@@ -71,15 +71,23 @@ export const App = () => {
             </div>
             <div class="card">
               <img src={chaleco} alt="./"/>
-              <p>Development of tech platforms</p>
+              <p>tech development and product management</p>
             </div>
             <div class="card">
               <img src={cuadros} alt="./"/>
-              <p>Structuring of investment rounds</p>
+              <p>MVPs and proofs of concept</p>
+            </div>
+            <div class="card">
+              <img src={chaleco} alt="./"/>
+              <p>administrative back'office services</p>
+            </div>
+            <div class="card">
+              <img src={cuadros} alt="./"/>
+              <p>financial modeling, budgeting, and fundraising strategies</p>
             </div>
             <div class="card">
               <img src={reloj} alt="./"/>
-              <p>Development of business models & monetization schemes</p>
+              <p>KPIs definition and tracking</p>
             </div>
           </div>
         </div>
