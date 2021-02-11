@@ -29,7 +29,8 @@
       height: 100%;
       top: 0;
       left: 0;
-      background: linear-gradient(90deg, rgba(131,58,180,0.30885857761073177) 0%, rgba(29,245,253,0.33126754119616597) 61%, rgba(48,212,22,0.208018241476278) 100%);
+      background: linear-gradient(90deg, rgba(108,87,180,0.5385504543614321) 0%, rgba(39,183,160,0.5413515748096114) 100%);
+      // background: linear-gradient(90deg, rgba(131,58,180,0.30885857761073177) 0%, rgba(29,245,253,0.33126754119616597) 61%, rgba(48,212,22,0.208018241476278) 100%);
     }
     h1 {
       font-size: 2.35714286em;
@@ -140,11 +141,16 @@
           object-fit: cover;
           border-radius: 50%;
           box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+          @media (max-width: 768px) { 
+            width: 160px;
+            height: 160px;
+          }
         }
         &-top {
           img {
             width: 160px;
             height: 160px;
+            
           }
         }
       }
