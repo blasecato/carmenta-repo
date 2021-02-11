@@ -33,15 +33,11 @@ import logo11 from "./assets/image/logo11.png";
 
 export const App = () => {
   const [sectionTeam, inSectionTeam] = useInView({ threshold: 0 })
+  const [sectionTeam2, inSectionTeam2] = useInView({ threshold: 0 })
   const [sectionAlliances, inSectionAlliances] = useInView({ threshold: 0 })
   const [sectionTouch, inSectionTouch] = useInView({ threshold: 0 })
   const [sectionFooter, inSectionFooter] = useInView({ threshold: 0 })
 
-  window.scroll({
-    top: 0, 
-    left: 0, 
-    behavior: 'smooth'
-  });
 
   return (
     <body className="App">
@@ -78,7 +74,8 @@ export const App = () => {
           <p class="paragraph">
             We partner with companies, from startups to large corporations, to transform ideas into successful businesses. We leverage our expertise in VC investing, investment banking, tech development, and our extensive network to boost entrepreneurial and intrapreneurial ventures in LATAM.
            </p>
-          <div data-aos="fade-up" class="content--cards">
+           <div ref={sectionTeam}></div>
+          <div class={`content--cards ${inSectionTeam && "animate__animated animate__fadeInUp"}`}>
             <div class="card">
               <img src={reloj} alt="./" />
               <p>Development of business models & monetization schemes</p>
@@ -107,7 +104,8 @@ export const App = () => {
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div ref={sectionTeam} class={`Home__team ${inSectionTeam && "animate__animated animate__delay-1s animate__fadeIn"}`} id="team">
+      <div ref={sectionTeam2}></div>
+      <div  class={`Home__team ${inSectionTeam2 && "animate__animated animate__fadeInUp"}`} id="team">
         <div class="container">
           <h1 class="title">Our Team</h1>
           <h3 class="paragraph">Trend setters, market booster, this is our Team!</h3>
@@ -141,7 +139,8 @@ export const App = () => {
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div id="alliances" ref={sectionAlliances} class={`Home__Alliances ${inSectionAlliances && "animate__animated animate__delay-1s animate__fadeIn"}`}>
+      <div ref={sectionAlliances}></div>
+      <div id="alliances"  class={`Home__Alliances ${inSectionAlliances && "animate__animated animate__fadeInUp"}`}>
         <div class="container">
           <h1 class="title">Alliances</h1>
           <div class="cont-photo">
@@ -185,7 +184,8 @@ export const App = () => {
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div ref={sectionTouch} class={`Home__touch ${inSectionTouch && "animate__animated animate__delay-1s animate__fadeIn"}`} id="touch">
+      <div ref={sectionTouch}></div>
+      <div  class={`Home__touch ${inSectionTouch && "animate__animated animate__fadeInUp"}`} id="touch">
         <div class="container">
           <h1 class="title">Get in touch with us</h1>
           <button>Contact Us</button>
@@ -193,7 +193,8 @@ export const App = () => {
       </div>
 
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div ref={sectionFooter} class={`site-info footer ${inSectionFooter && "animate__animated animate__delay-1s animate__fadeIn"}`}>
+      <div ref={sectionFooter}></div>
+      <div  class={`site-info footer ${inSectionFooter && "animate__animated animate__fadeInUp"}`}>
         <div class="container">
           <div class="box-left">
             <ul class="list">
