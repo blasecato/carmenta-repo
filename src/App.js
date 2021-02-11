@@ -52,8 +52,8 @@ export const App = () => {
         <video src={video} autoplay className="video"/>
         <div class="container">
           <h1>
-            Carmenta Labs is dedicated to helping early stage tech startups in LATAM grow by leveraging our experience and extensive networks.
-        </h1>
+            Unleash the potential of your ideas.
+          </h1>
         </div>
       </div>
 
@@ -62,8 +62,8 @@ export const App = () => {
         <div class="container">
           <h1 class="title">About Us</h1>
           <p class="paragraph">
-            We partner with early stage tech companies, accompanying them in their growth through the development of sustainable business models, tech infrastructure, monetization schemes and fundraising strategies. Our experience in tech-based investment, software development, our investor networks and knowledge of the LATAM startup ecosystem enable us to assist startups on these three pillars.
-        </p>
+          We partner with companies, from startups to large corporations, to transform ideas into successful businesses. We leverage our expertise in VC investing, investment banking, tech development, and our extensive network to boost entrepreneurial and intrapreneurial ventures in LATAM.  
+           </p>
           <div class="content--cards">
             <div class="card">
               <img src={reloj} alt="./"/>
