@@ -8,11 +8,14 @@ import reloj from "./assets/image/reloj.PNG";
 import cuadros from "./assets/image/cuadros.PNG";
 import chaleco from "./assets/image/chaleco.PNG";
 
-import face from "./assets/image/face-white.PNG";
-import inst from "./assets/image/instagram.PNG";
 import int from "./assets/image/int.PNG";
 
 import avatar from "./assets/image/avatar.jpg";
+import avatar1 from "./assets/image/avatar1.PNG";
+import avatar2 from "./assets/image/avatar2.PNG";
+import avatar3 from "./assets/image/avatar3.PNG";
+import avatar4 from "./assets/image/avatar4.PNG";
+import avatar5 from "./assets/image/avatar5.PNG";
 
 import logo1 from "./assets/image/logo1.png";
 import logo2 from "./assets/image/logo2.png";
@@ -95,33 +98,33 @@ export const App = () => {
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
       <div ref={sectionTeam} class={`Home__team ${inSectionTeam && "animate__animated animate__delay-1s animate__fadeIn"}`}>
         <div class="container">
-          <h1 class="title">The Team</h1>
+          <h1 class="title">Our Team</h1>
           <h3 class="paragraph">Trend setters, market booster, this is our Team!</h3>
           <div class="Home__team--photo">
-            <div class="people">
-              <img src={avatar} alt="./"/>
+            <div class="people people-top">
+              <img src={avatar1} alt="./"/>
               <p>Juan Sebastián Ortiz</p>
               <span>Co-founder</span>
             </div>
-            <div class="people">
-            <img src={avatar} alt="./"/>
-              <p>Juan Sebastián Ortiz</p>
+            <div class="people people-top">
+            <img src={avatar2} alt="./"/>
+              <p>Boris Ramirez</p>
               <span>Co-founder</span>
             </div>
-            <div class="people">
-            <img src={avatar} alt="./"/>
-              <p>Juan Sebastián Ortiz</p>
-              <span>Co-founder</span>
+            <div class="people people-top">
+            <img src={avatar3} alt="./"/>
+              <p>Laura Robu</p>
+              <span>Head of Business Operations</span>
             </div>
             <div class="people">
-            <img src={avatar} alt="./"/>
-              <p>Juan Sebastián Ortiz</p>
-              <span>Co-founder</span>
+            <img src={avatar4} alt="./"/>
+              <p>Pablo Navarro</p>
+              <span>Advisor</span>
             </div>
             <div class="people">
-            <img src={avatar} alt="./"/>
-              <p>Juan Sebastián Ortiz</p>
-              <span>Co-founder</span>
+            <img src={avatar5} alt="./"/>
+              <p>Eduardo Van Meerbeke</p>
+              <span>Advisor</span>
             </div>
           </div>
         </div>
@@ -167,8 +170,6 @@ export const App = () => {
 					</p>
           </div>
           <div class="networks">
-            <img src={face} alt="./"/>
-            <img src={inst} alt="./"/>
             <img src={int} alt="./"/>
           </div>
         </div>
