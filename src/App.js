@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from "./assets/image/logo-c.png";
 import video from "./assets/image/paisaje.mp4";
+
+import { useInView } from "react-intersection-observer"
 
 import reloj from "./assets/image/reloj.PNG";
 import cuadros from "./assets/image/cuadros.PNG";
@@ -22,6 +24,11 @@ import logo7 from "./assets/image/logo7.png";
 
 
 export const App = () => {
+  const [sectionTeam, inSectionTeam] = useInView({ threshold: 0 })
+  const [sectionAlliances, inSectionAlliances] = useInView({ threshold: 0 })
+  const [sectionTouch, inSectionTouch] = useInView({ threshold: 0 })
+  const [sectionFooter, inSectionFooter] = useInView({ threshold: 0 })
+ 
   return (
     <body className="App">
       <header class="Header">
@@ -51,7 +58,7 @@ export const App = () => {
       </div>
 
 
-      <div class="Home__about">
+      <div data-aos="fade-up"  class="Home__about">
         <div class="container">
           <h1 class="title">About Us</h1>
           <p class="paragraph">
@@ -78,7 +85,7 @@ export const App = () => {
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div class="Home__team">
+      <div ref={sectionTeam} class={`Home__team ${inSectionTeam && "animate__animated animate__delay-1s animate__fadeIn"}`}>
         <div class="container">
           <h1 class="title">The Team</h1>
           <h3 class="paragraph">Trend setters, market booster, this is our Team!</h3>
@@ -112,7 +119,7 @@ export const App = () => {
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div class="Home__Alliances">
+      <div ref={sectionAlliances} class={`Home__Alliances ${inSectionAlliances && "animate__animated animate__delay-1s animate__fadeIn"}`}>
         <div class="container">
           <h1 class="title">Alliances</h1>
           <div class="cont-photo">
@@ -131,7 +138,7 @@ export const App = () => {
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div class="Home__touch">
+      <div ref={sectionTouch} class={`Home__touch ${inSectionTouch && "animate__animated animate__delay-1s animate__fadeIn"}`}>
         <div class="container">
           <h1 class="title">Get in touch with us</h1>
           <button>Contact Us</button>
@@ -139,7 +146,7 @@ export const App = () => {
       </div>
 
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div class="site-info footer">
+      <div ref={sectionFooter} class={`site-info footer ${inSectionFooter && "animate__animated animate__delay-1s animate__fadeIn"}`}>
         <div class="container">
           <div class="box-left">
             <ul class="list">

@@ -1,3 +1,6 @@
+.App {
+  overflow-x: hidden;
+}
 .Home {
   &__banner {
     // background-image: url("../images/banner.png");
@@ -15,6 +18,7 @@
       width: 100%;
       left: 0%;
       z-index: 1;
+      min-width: 890px;
       min-height: 500px;
       top: 0;
     }

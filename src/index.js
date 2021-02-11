@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { createBrowserHistory } from 'history'
 import './main.scss'; 
-import * as serviceWorker from './serviceWorker'; 
+import * as serviceWorker from './serviceWorker';
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 
 export const history = createBrowserHistory();
  
- 
+AOS.init();
 ReactDOM.render(
     <App />,
   document.getElementById('root')
