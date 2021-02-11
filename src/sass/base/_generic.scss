@@ -1,21 +1,47 @@
 $primary: #1f2b2d;
 $primary-dark: #151c1d;
+$maxContainer: 1280px;
 
-.Header{
-    .btn-prymary-ligth{
-        background-color: #ffffff;
-        width: 120px;
-        text-align: center;
-        line-height: 30px;
-        height: 30px;
-        color: #23393d;
-        font-weight: 600;
-        border-radius: 2em;
-        font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Raleway", sans-serif;
+  }
+  html {
+    margin: 0% !important;
+    margin-top: 0% !important;
+  }
+
+  .container {
+    max-width: $maxContainer;
+    margin: auto;
+    padding: 0 50px;
+  }
+  
+  .title {
+    font-size: 2.35714286em;
+    line-height: 1.36363636em;
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    max-width: 610px;
+    font-weight: 300;
+    color: #252525;
+    margin-bottom: 0.78787878787879em;
+    @media (max-width: 768px) { 
+      font-size: 1.78571429em !important;
+      line-height: 1.5em !important;
     }
-    .btn-l{
-        line-height: 0px !important;
-        width: 130px;
-    
-    }   
-}
+  
+  }
+  .paragraph {
+    font-size: 1em;
+    margin-bottom: 0;
+    line-height: 1.35714286em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    color: #666666;
+    font-weight: 400;
+  
+    @media (max-width: 768px) { 
+      font-size: 1.35714286em !important;
+      line-height: 1.36842105em !important;
+    }
+  }
