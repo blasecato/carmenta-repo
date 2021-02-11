@@ -25,6 +25,11 @@ import logo5 from "./assets/image/logo5.png";
 import logo6 from "./assets/image/logo6.png";
 import logo7 from "./assets/image/logo7.png";
 
+import logo8 from "./assets/image/movi.png";
+import logo9 from "./assets/image/neivor.png";
+import logo10 from "./assets/image/logo10.png";
+import logo11 from "./assets/image/logo11.png";
+
 
 export const App = () => {
   const [sectionTeam, inSectionTeam] = useInView({ threshold: 0 })
@@ -32,25 +37,31 @@ export const App = () => {
   const [sectionTouch, inSectionTouch] = useInView({ threshold: 0 })
   const [sectionFooter, inSectionFooter] = useInView({ threshold: 0 })
 
+  window.scroll({
+    top: 0, 
+    left: 0, 
+    behavior: 'smooth'
+  });
+
   return (
     <body className="App">
       <header class="Header">
-        <nav class="columns is-mobile Header__topBar is-gapless">
+        <nav class="container columns is-mobile Header__topBar is-gapless">
           <div class="column">
             <img src={logo} alt="./" className="logo" />
           </div>
           <div class="column">
             <ul>
-              <li>HOME</li>
-              <li>ABOUT</li>
-              <li>TEAM</li>
-              <li>CONTACT</li>
+              <li><a href="#banner">HOME</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#team">TEAM</a></li>
+              <li><a href="#alliances">CONTACT</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
-      <div class="Home__banner">
+      <div  class="Home__banner" id="banner">
         <div className="gradient" />
         <video src={video} autoplay className="video" />
         <div class="container">
@@ -61,13 +72,13 @@ export const App = () => {
       </div>
 
 
-      <div data-aos="fade-up" class="Home__about">
+      <div data-aos="fade-up" class="Home__about" id="about">
         <div class="container">
           <h1 class="title">About Us</h1>
           <p class="paragraph">
             We partner with companies, from startups to large corporations, to transform ideas into successful businesses. We leverage our expertise in VC investing, investment banking, tech development, and our extensive network to boost entrepreneurial and intrapreneurial ventures in LATAM.
            </p>
-          <div class="content--cards">
+          <div data-aos="fade-up" class="content--cards">
             <div class="card">
               <img src={reloj} alt="./" />
               <p>Development of business models & monetization schemes</p>
@@ -96,45 +107,44 @@ export const App = () => {
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div ref={sectionTeam} class={`Home__team ${inSectionTeam && "animate__animated animate__delay-1s animate__fadeIn"}`}>
+      <div ref={sectionTeam} class={`Home__team ${inSectionTeam && "animate__animated animate__delay-1s animate__fadeIn"}`} id="team">
         <div class="container">
           <h1 class="title">Our Team</h1>
           <h3 class="paragraph">Trend setters, market booster, this is our Team!</h3>
           <div class="Home__team--photo">
-            <div class="people people-top">
+            <a href="https://www.linkedin.com/in/juansortiz/?originalSubdomain=co" class="people people-top">
               <img src={avatar1} alt="./" />
               <p>Juan Sebastián Ortiz</p>
               <span>Co-founder</span>
-            </div>
-            <div class="people people-top">
+            </a>
+            <a href="https://www.linkedin.com/in/boris-ram%C3%ADrez-barrera-47b16981/?originalSubdomain=co" class="people people-top">
               <img src={avatar2} alt="./" />
               <p>Boris Ramirez</p>
               <span>Co-founder</span>
-            </div>
-            <div class="people people-top">
+            </a>
+            <a href="https://www.linkedin.com/in/laurarobu/?challengeId=AQEPW59EoS_c2AAAAXeRUfGGpI2udPU5LSTCwRI5Xp3dOl3Jfgyl1_9hlegiBv1JDb7J6dba7DtwineVhLenhD0IAEBmeg2rHQ&submissionId=a13cbe7f-28b5-6216-6bea-16dfedab443d&originalSubdomain=ca" class="people people-top">
               <img src={avatar3} alt="./" />
               <p>Laura Robu</p>
               <span>Head of Business Operations</span>
-            </div>
-            <div class="people">
+            </a>
+            <a href="https://www.linkedin.com/in/pablon17/?originalSubdomain=co" class="people">
               <img src={avatar4} alt="./" />
               <p>Pablo Navarro</p>
               <span>Advisor</span>
-            </div>
-            <div class="people">
+            </a>
+            <a href="https://www.linkedin.com/in/eduardo-van-meerbeke-85194234/?originalSubdomain=co" class="people">
               <img src={avatar5} alt="./" />
               <p>Eduardo Van Meerbeke</p>
               <span>Advisor</span>
-            </div>
+            </a>
           </div>
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div ref={sectionAlliances} class={`Home__Alliances ${inSectionAlliances && "animate__animated animate__delay-1s animate__fadeIn"}`}>
+      <div id="alliances" ref={sectionAlliances} class={`Home__Alliances ${inSectionAlliances && "animate__animated animate__delay-1s animate__fadeIn"}`}>
         <div class="container">
           <h1 class="title">Alliances</h1>
           <div class="cont-photo">
-            
             <a href="./">
               <img src={logo3} alt="./" />
             </a>
@@ -151,19 +161,31 @@ export const App = () => {
           <h1 class="title">Our Entrepreneurs</h1>
           <div class="cont-photo">
             <a href="./">
-              <img src={logo2} alt="./" />
+              <img src={logo7} alt="https://poetri-landing.web.app/" />
             </a>
             <a href="./">
-              <img src={logo7} alt="./" />
+              <img src={logo2} alt="https://mercadodelcampo.co/" />
             </a>
             <a href="./">
               <img src={logo1} alt="./" />
+            </a>
+            <a href="./">
+              <img src={logo8} alt="./" />
+            </a>
+            <a href="./">
+              <img src={logo9} alt="./" />
+            </a>
+            <a href="./">
+              <img src={logo10} alt="./" />
+            </a>
+            <a href="./">
+              <img src={logo11} alt="./" />
             </a>
           </div>
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
-      <div ref={sectionTouch} class={`Home__touch ${inSectionTouch && "animate__animated animate__delay-1s animate__fadeIn"}`}>
+      <div ref={sectionTouch} class={`Home__touch ${inSectionTouch && "animate__animated animate__delay-1s animate__fadeIn"}`} id="touch">
         <div class="container">
           <h1 class="title">Get in touch with us</h1>
           <button>Contact Us</button>

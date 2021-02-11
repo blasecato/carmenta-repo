@@ -7,8 +7,8 @@
   width: 100%;
   padding: 15px;
   img {
-    width: 166px;
-    height: 42px;
+    width: 186px;
+    height: 47px;
     object-fit: cover;
 
   }
@@ -25,11 +25,15 @@
       margin-bottom: 0;
       li {
         color: white;
-        font-size: 0.857142857142857em;
+        font-size: 1em;
         line-height: 2.166666666666667em;
         text-transform: uppercase;
         font-weight: 600;
         opacity: .5;
+        cursor: pointer;
+      }
+      li:hover {
+        opacity: 1;
       }
     }
     img {

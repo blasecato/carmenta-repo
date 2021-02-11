@@ -4,10 +4,12 @@ $maxContainer: 1280px;
 
 body {
     font-family: "Raleway", sans-serif;
+    scroll-behavior: smooth;
   }
   html {
     margin: 0% !important;
     margin-top: 0% !important;
+    scroll-behavior: smooth;
   }
 
   .container {
