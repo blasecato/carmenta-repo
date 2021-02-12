@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from "./assets/image/logo-c.png";
-import video from "./assets/image/paisaje.mp4";
+import video from "./assets/image/video.mp4";
 
 import { useInView } from "react-intersection-observer"
 
@@ -29,6 +29,8 @@ import logo8 from "./assets/image/movi.png";
 import logo9 from "./assets/image/neivor.png";
 import logo10 from "./assets/image/logo10.png";
 import logo11 from "./assets/image/logo11.png";
+
+import ReactPlayer from "react-player"
 
 
 export const App = () => {
@@ -60,6 +62,26 @@ export const App = () => {
       <div  class="Home__banner" id="banner">
         <div className="gradient" />
         <video src={video} autoplay className="video" />
+
+        <ReactPlayer
+          id={"1"}
+          url={video}
+          className="video"
+          playing={true}
+          onEnded={true}
+          controls={false}
+          muted
+          playsInline
+          config={{
+            file: {
+              attributes: {
+                muted: true,
+                playsInline: true
+              },
+            },
+          }}
+        />
+
         <div class="container">
           <h1>
             Unleash the potential of your ideas.
