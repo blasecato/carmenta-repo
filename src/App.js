@@ -40,6 +40,9 @@ export const App = () => {
   const [sectionTouch, inSectionTouch] = useInView({ threshold: 0 })
   const [sectionFooter, inSectionFooter] = useInView({ threshold: 0 })
 
+  const contactUs = () => {
+    window.location.href = "mailto:laura@carmentalabs.com"; 
+  }
 
   return (
     <body className="App">
@@ -70,6 +73,7 @@ export const App = () => {
           playing={true}
           onEnded={true}
           controls={false}
+          loop={true}
           muted
           playsInline
           config={{
@@ -84,7 +88,7 @@ export const App = () => {
 
         <div class="container">
           <h1>
-            Unleash the potential of your ideas.
+            Unleash the potential of your ideas
           </h1>
         </div>
       </div>
@@ -94,7 +98,7 @@ export const App = () => {
         <div class="container">
           <h1 class="title">About Us</h1>
           <p class="paragraph">
-            We partner with companies, from startups to large corporations, to transform ideas into successful businesses. We leverage our expertise in VC investing, investment banking, tech development, and our extensive network to boost entrepreneurial and intrapreneurial ventures in LATAM.
+            We partner with companies, from startups to large corporations, to transform ideas into successful businesses. We leverage our expertise in VC investing, investment banking, tech development, and our extensive network to boost entrepreneurial and intrapreneurial ventures in LATAM
            </p>
            <div ref={sectionTeam}></div>
           <div class={`content--cards ${inSectionTeam && "animate__animated animate__fadeInUp"}`}>
@@ -104,7 +108,7 @@ export const App = () => {
             </div>
             <div class="card">
               <img src={chaleco} alt="./" />
-              <p>tech development and product management</p>
+              <p>Tech development and product management</p>
             </div>
             <div class="card">
               <img src={cuadros} alt="./" />
@@ -112,11 +116,11 @@ export const App = () => {
             </div>
             <div class="card">
               <img src={chaleco} alt="./" />
-              <p>administrative back'office services</p>
+              <p>Administrative back'office services</p>
             </div>
             <div class="card">
               <img src={cuadros} alt="./" />
-              <p>financial modeling, budgeting, and fundraising strategies</p>
+              <p>Financial modeling, budgeting, and fundraising strategies</p>
             </div>
             <div class="card">
               <img src={reloj} alt="./" />
@@ -147,7 +151,7 @@ export const App = () => {
               <p>Laura Robu</p>
               <span>Head of Business Operations</span>
             </a>
-            <a href="https://www.linkedin.com/in/pablon17/?originalSubdomain=co" class="people">
+            {/*<a href="https://www.linkedin.com/in/pablon17/?originalSubdomain=co" class="people">
               <img src={avatar4} alt="./" />
               <p>Pablo Navarro</p>
               <span>Advisor</span>
@@ -156,7 +160,7 @@ export const App = () => {
               <img src={avatar5} alt="./" />
               <p>Eduardo Van Meerbeke</p>
               <span>Advisor</span>
-            </a>
+            </a>*/}
           </div>
         </div>
       </div>
@@ -209,8 +213,8 @@ export const App = () => {
       <div ref={sectionTouch}></div>
       <div  class={`Home__touch ${inSectionTouch && "animate__animated animate__fadeInUp"}`} id="touch">
         <div class="container">
-          <h1 class="title">Get in touch with us</h1>
-          <button>Contact Us</button>
+          <h1 class="title">Get in touch</h1>
+          <button onClick={contactUs}>Contact Us</button>
         </div>
       </div>
 
