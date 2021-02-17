@@ -69,5 +69,12 @@
   }
   @media (max-width: 768px) { 
     display: none;
+    padding: 15px 0;
+    ul {
+      display: none;
+    }
+    .columns {
+      padding: 0 20px;
+    }
   }
 }

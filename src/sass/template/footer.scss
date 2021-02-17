@@ -12,14 +12,16 @@
             .list {
                 display: flex;
                 li {
-                    font-size: 0.85714286em;
-                    line-height: 2.16666667em;
-                    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
-                    color: #252525;
-                    font-weight: 300;
-                    font-variant-ligatures: common-ligatures;
-                    font-weight: 700;
-                    margin-right: 20px;
+                    a {
+                        font-size: 0.85714286em;
+                        line-height: 2.16666667em;
+                        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+                        color: #252525;
+                        font-weight: 300;
+                        font-variant-ligatures: common-ligatures;
+                        font-weight: 700;
+                        margin-right: 20px;
+                    }
                 }
             }
             p {
@@ -45,6 +47,14 @@
     @media (max-width: 768px) { 
         .container {
             flex-direction: column;
+            .list {
+                justify-content: center;
+            }
+            .box-left {
+                p {
+                    text-align: center;
+                }
+            }
             .networks {
                 margin-top: 20px;
                 justify-content: space-around;

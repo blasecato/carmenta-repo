@@ -4,6 +4,8 @@ import video from "./assets/image/video.mp4";
 
 import { useInView } from "react-intersection-observer"
 
+import Slider from "react-slick";
+
 import reloj from "./assets/image/reloj.PNG";
 import cuadros from "./assets/image/cuadros.PNG";
 import chaleco from "./assets/image/chaleco.PNG";
@@ -41,8 +43,46 @@ export const App = () => {
   const [sectionFooter, inSectionFooter] = useInView({ threshold: 0 })
 
   const contactUs = () => {
-    window.location.href = "mailto:laura@carmentalabs.com"; 
+    window.location.href = "mailto:laura@carmentalabs.com";
   }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    // autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    // cssEase: "linear"
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
     <body className="App">
@@ -62,10 +102,9 @@ export const App = () => {
         </nav>
       </header>
 
-      <div  class="Home__banner" id="banner">
+      <div class="Home__banner" id="banner">
         <div className="gradient" />
-        <video src={video} autoplay className="video" />
-
+        {/* <video src={video} autoplay className="video" /> */}
         <ReactPlayer
           id={"1"}
           url={video}
@@ -87,6 +126,7 @@ export const App = () => {
         />
 
         <div class="container">
+          <img src={logo} alt="./" className="logo" />
           <h1>
             Unleash the potential of your ideas
           </h1>
@@ -100,7 +140,7 @@ export const App = () => {
           <p class="paragraph">
             We partner with companies, from startups to large corporations, to transform ideas into successful businesses. We leverage our expertise in VC investing, investment banking, tech development, and our extensive network to boost entrepreneurial and intrapreneurial ventures in LATAM
            </p>
-           <div ref={sectionTeam}></div>
+          <div ref={sectionTeam}></div>
           <div class={`content--cards ${inSectionTeam && "animate__animated animate__fadeInUp"}`}>
             <div class="card">
               <img src={reloj} alt="./" />
@@ -131,7 +171,7 @@ export const App = () => {
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
       <div ref={sectionTeam2}></div>
-      <div  class={`Home__team ${inSectionTeam2 && "animate__animated animate__fadeInUp"}`} id="team">
+      <div class={`Home__team ${inSectionTeam2 && "animate__animated animate__fadeInUp"}`} id="team">
         <div class="container">
           <h1 class="title">Our Team</h1>
           <h3 class="paragraph">Trend setters, market booster, this is our Team!</h3>
@@ -166,52 +206,54 @@ export const App = () => {
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
       <div ref={sectionAlliances}></div>
-      <div id="alliances"  class={`Home__Alliances ${inSectionAlliances && "animate__animated animate__fadeInUp"}`}>
+      <div id="alliances" class={`Home__Alliances ${inSectionAlliances && "animate__animated animate__fadeInUp"}`}>
         <div class="container">
           <h1 class="title">Alliances</h1>
           <div class="cont-photo">
             <a href="./">
               <img src={logo3} alt="./" />
             </a>
-            <a href="./">
+            <a href="./https://uvirtual.unisabana.edu.co/?utm_source=google&utm_medium=cpc&utm_adgroup=103793025545&utm_campaign=10556128072&utm_content=449377718528&utm_term=&matchtype=b&network=g&device=c&devicemodel=&placement=&target=&adposition=&feeditemid=&gclid=CjwKCAiAmrOBBhA0EiwArn3mfDUiQ79e6i7lxKL4FKfDpPPdjGTrKup1lQGZbhMWWTDOSVTlnOgmuhoCgvsQAvD_BwE">
               <img src={logo4} alt="./" />
             </a>
-            <a href="./">
+            <a href="./https://uniandes.edu.co/">
               <img src={logo5} alt="./" />
             </a>
-            <a href="./">
+            <a href="./https://www.cesa.edu.co/">
               <img src={logo6} alt="./" />
             </a>
           </div>
           <h1 class="title">Our Entrepreneurs</h1>
-          <div class="cont-photo">
-            <a href="./">
-              <img src={logo7} alt="https://poetri-landing.web.app/" />
-            </a>
-            <a href="./">
-              <img src={logo2} alt="https://mercadodelcampo.co/" />
-            </a>
-            <a href="./">
-              <img src={logo1} alt="./" />
-            </a>
-            <a href="./">
-              <img src={logo8} alt="./" />
-            </a>
-            <a href="./">
-              <img src={logo9} alt="./" />
-            </a>
-            <a href="./">
-              <img src={logo10} alt="./" />
-            </a>
-            <a href="./">
-              <img src={logo11} alt="./" />
-            </a>
+          <div class="cont-car">
+            <Slider {...settings}>
+              <a href="./https://poetri-landing.web.app/">
+                <img src={logo7} alt="./" />
+              </a>
+              <a href="./https://mercadodelcampo.co/">
+                <img src={logo2} alt="./" />
+              </a>
+              <a href="./">
+                <img src={logo1} alt="./" />
+              </a>
+              <a href="./https://www.movii.com.co/en/home/">
+                <img src={logo8} alt="./" />
+              </a>
+              <a href="./https://neivor.com/">
+                <img src={logo9} alt="./" />
+              </a>
+              <a href="./https://www.ruedaz.com.co/home">
+                <img src={logo10} alt="./" />
+              </a>
+              <a href="./http://parking.net.co/es/">
+                <img src={logo11} alt="./" />
+              </a>
+            </Slider>
           </div>
         </div>
       </div>
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
       <div ref={sectionTouch}></div>
-      <div  class={`Home__touch ${inSectionTouch && "animate__animated animate__fadeInUp"}`} id="touch">
+      <div class={`Home__touch ${inSectionTouch && "animate__animated animate__fadeInUp"}`} id="touch">
         <div class="container">
           <h1 class="title">Get in touch</h1>
           <button onClick={contactUs}>Contact Us</button>
@@ -220,20 +262,28 @@ export const App = () => {
 
       {/* <!-- ------------------------------------------------------------------------------------- --> */}
       <div ref={sectionFooter}></div>
-      <div  class={`site-info footer ${inSectionFooter && "animate__animated animate__fadeInUp"}`}>
+      <div class={`site-info footer ${inSectionFooter && "animate__animated animate__fadeInUp"}`}>
         <div class="container">
           <div class="box-left">
             <ul class="list">
-              <li>ABOUT</li>
-              <li>TEAM</li>
-              <li>CONTACT</li>
+              <li>
+                <a href="#about">ABOUT</a>
+              </li>
+              <li>
+                <a href="#team">TEAM</a>
+              </li>
+              <li>
+                <a href="#touch">CONTACT</a>
+              </li>
             </ul>
             <p>
               © 2021 Carmenta Labs
 					</p>
           </div>
           <div class="networks">
-            <img src={int} alt="./" />
+            <a href="https://www.linkedin.com/company/carmenta-ventures/about/">
+              <img src={int} alt="./" />
+            </a>
           </div>
         </div>
       </div>
