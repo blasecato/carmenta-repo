@@ -51,7 +51,7 @@ export const App = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     // autoplay: true,
     speed: 2000,
     autoplaySpeed: 3000,
