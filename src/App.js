@@ -216,13 +216,13 @@ export const App = () => {
             <a href="./">
               <img src={logo3} alt="./" />
             </a>
-            <a href="./https://uvirtual.unisabana.edu.co/?utm_source=google&utm_medium=cpc&utm_adgroup=103793025545&utm_campaign=10556128072&utm_content=449377718528&utm_term=&matchtype=b&network=g&device=c&devicemodel=&placement=&target=&adposition=&feeditemid=&gclid=CjwKCAiAmrOBBhA0EiwArn3mfDUiQ79e6i7lxKL4FKfDpPPdjGTrKup1lQGZbhMWWTDOSVTlnOgmuhoCgvsQAvD_BwE">
+            <a href="https://uvirtual.unisabana.edu.co/?utm_source=google&utm_medium=cpc&utm_adgroup=103793025545&utm_campaign=10556128072&utm_content=449377718528&utm_term=&matchtype=b&network=g&device=c&devicemodel=&placement=&target=&adposition=&feeditemid=&gclid=CjwKCAiAmrOBBhA0EiwArn3mfDUiQ79e6i7lxKL4FKfDpPPdjGTrKup1lQGZbhMWWTDOSVTlnOgmuhoCgvsQAvD_BwE">
               <img src={logo4} alt="./" />
             </a>
-            <a href="./https://uniandes.edu.co/">
+            <a href="https://uniandes.edu.co/">
               <img src={logo5} alt="./" />
             </a>
-            <a href="./https://www.cesa.edu.co/">
+            <a href="https://www.cesa.edu.co/">
               <img src={logo6} alt="./" />
             </a>
           </div>
