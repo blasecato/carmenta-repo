@@ -204,12 +204,7 @@
           }
         }
       }
-      .slick-next {
-        right: 0px;
-      }
-      .slick-prev {
-        left: 0px;
-    }
+      
       .slick-next:before , .slick-prev:before {
         color: #878787;
       }
@@ -317,6 +312,12 @@
     &__Alliances {
       .container {
         padding: 0 15px;
+        .slick-next {
+          right: 0px;
+        }
+        .slick-prev {
+          left: 0px;
+        }
         .cont-photo {
           flex-wrap: wrap;
           img {
