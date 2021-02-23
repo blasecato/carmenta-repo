@@ -6,9 +6,12 @@ import { useInView } from "react-intersection-observer"
 
 import Slider from "react-slick";
 
-import reloj from "./assets/image/reloj.PNG";
-import cuadros from "./assets/image/cuadros.PNG";
-import chaleco from "./assets/image/chaleco.PNG";
+import ima1 from "./assets/image/1.png";
+import ima2 from "./assets/image/2.png";
+import ima3 from "./assets/image/3.png";
+import ima4 from "./assets/image/4.png";
+import ima5 from "./assets/image/5.png";
+import ima6 from "./assets/image/6.png";
 
 import int from "./assets/image/int.PNG";
 
@@ -53,8 +56,8 @@ export const App = () => {
     slidesToShow: 5,
     slidesToScroll: 3,
     // autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
+    speed: 500,
+    autoplaySpeed: 1000,
     // cssEase: "linear"
     responsive: [
       {
@@ -134,7 +137,7 @@ export const App = () => {
       </div>
 
 
-      <div data-aos="fade-up" class="Home__about" id="about">
+      <div class="Home__about" id="about">
         <div class="container">
           <h1 class="title">About Us</h1>
           <p class="paragraph">
@@ -142,30 +145,30 @@ export const App = () => {
            </p>
           <div ref={sectionTeam}></div>
           <div class={`content--cards ${inSectionTeam && "animate__animated animate__fadeInUp"}`}>
-            <div class="card">
-              <img src={reloj} alt="./" />
-              <p>Development of business models & monetization schemes</p>
-            </div>
-            <div class="card">
-              <img src={chaleco} alt="./" />
+            <a href="https://www.flaticon.com/free-icon/data-management_2920249?term=technology&page=1&position=3&page=1&position=3&related_id=2920249&origin=style" class="card">
+              <img src={ima1} alt="./" />
               <p>Tech development and product management</p>
-            </div>
-            <div class="card">
-              <img src={cuadros} alt="./" />
+            </a>
+            <a href="https://www.flaticon.com/free-icon/earnings_4144763?term=monetization&page=1&position=5&page=1&position=5&related_id=4144763&origin=style" class="card">
+              <img src={ima2} alt="./" />
+              <p>Development of business models and monetization schemes</p>
+            </a>
+            <a href="https://www.flaticon.com/free-icon/box_3010731?term=product&page=1&position=2&page=1&position=2&related_id=3010731&origin=style" class="card">
+              <img src={ima3} alt="./" />
               <p>MVPs and proofs of concept</p>
-            </div>
-            <div class="card">
-              <img src={chaleco} alt="./" />
-              <p>Administrative back'office services</p>
-            </div>
-            <div class="card">
-              <img src={cuadros} alt="./" />
+            </a>
+            <a href="https://www.flaticon.com/free-icon/agenda_3921361?term=administration&page=1&position=12&page=1&position=12&related_id=3921361&origin=style" class="card">
+              <img src={ima4} alt="./" />
+              <p>Administrative back office services</p>
+            </a>
+            <a href="https://www.flaticon.com/free-icon/money_631180?term=finance&page=1&position=2&page=1&position=2&related_id=631180&origin=style" class="card">
+              <img src={ima5} alt="./" />
               <p>Financial modeling, budgeting, and fundraising strategies</p>
-            </div>
-            <div class="card">
-              <img src={reloj} alt="./" />
+            </a>
+            <a href="https://www.flaticon.com/free-icon/statistics_4263456?term=graphs&page=1&position=1&page=1&position=1&related_id=4263456&origin=style" class="card">
+              <img src={ima6} alt="./" />
               <p>KPIs definition and tracking</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -226,26 +229,29 @@ export const App = () => {
           <h1 class="title">Our Entrepreneurs</h1>
           <div class="cont-car">
             <Slider {...settings}>
-              <a href="./https://poetri-landing.web.app/">
+              <a href="https://poetri-landing.web.app/">
                 <img src={logo7} alt="./" />
               </a>
-              <a href="./https://mercadodelcampo.co/">
+              <a href="https://mercadodelcampo.co/">
                 <img src={logo2} alt="./" />
               </a>
               <a href="./">
                 <img src={logo1} alt="./" />
               </a>
-              <a href="./https://www.movii.com.co/en/home/">
-                <img src={logo8} alt="./" />
+              <a href="https://www.movii.com.co/en/home/">
+              <img src={logo8} alt="./" />
               </a>
-              <a href="./https://neivor.com/">
-                <img src={logo9} alt="./" />
-              </a>
-              <a href="./https://www.ruedaz.com.co/home">
-                <img src={logo10} alt="./" />
-              </a>
-              <a href="./http://parking.net.co/es/">
+              <div className="double">
+                <a href="https://www.ruedaz.com.co/home">
+                  <img src={logo10} alt="./" />
+                </a>
+                <a href="http://parking.net.co/es/ ">
                 <img src={logo11} alt="./" />
+                </a>
+              </div>
+              
+              <a href="https://neivor.com/">
+                <img src={logo9} alt="./" />
               </a>
             </Slider>
           </div>
