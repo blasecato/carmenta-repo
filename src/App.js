@@ -145,27 +145,27 @@ export const App = () => {
            </p>
           <div ref={sectionTeam}></div>
           <div class={`content--cards ${inSectionTeam && "animate__animated animate__fadeInUp"}`}>
-            <a href="https://www.flaticon.com/free-icon/data-management_2920249?term=technology&page=1&position=3&page=1&position=3&related_id=2920249&origin=style" class="card">
+            <a class="card">
               <img src={ima1} alt="./" />
               <p>Tech development and product management</p>
             </a>
-            <a href="https://www.flaticon.com/free-icon/earnings_4144763?term=monetization&page=1&position=5&page=1&position=5&related_id=4144763&origin=style" class="card">
+            <a class="card">
               <img src={ima2} alt="./" />
-              <p>Development of business models and monetization schemes</p>
+              <p>Business models and monetization schemes</p>
             </a>
-            <a href="https://www.flaticon.com/free-icon/box_3010731?term=product&page=1&position=2&page=1&position=2&related_id=3010731&origin=style" class="card">
+            <a class="card">
               <img src={ima3} alt="./" />
               <p>MVPs and proofs of concept</p>
             </a>
-            <a href="https://www.flaticon.com/free-icon/agenda_3921361?term=administration&page=1&position=12&page=1&position=12&related_id=3921361&origin=style" class="card">
+            <a class="card">
               <img src={ima4} alt="./" />
               <p>Administrative back office services</p>
             </a>
-            <a href="https://www.flaticon.com/free-icon/money_631180?term=finance&page=1&position=2&page=1&position=2&related_id=631180&origin=style" class="card">
+            <a class="card">
               <img src={ima5} alt="./" />
               <p>Financial modeling, budgeting, and fundraising strategies</p>
             </a>
-            <a href="https://www.flaticon.com/free-icon/statistics_4263456?term=graphs&page=1&position=1&page=1&position=1&related_id=4263456&origin=style" class="card">
+            <a class="card">
               <img src={ima6} alt="./" />
               <p>KPIs definition and tracking</p>
             </a>
@@ -179,17 +179,17 @@ export const App = () => {
           <h1 class="title">Our Team</h1>
           <h3 class="paragraph">Trend setters, market booster, this is our Team!</h3>
           <div class="Home__team--photo">
-            <a href="https://www.linkedin.com/in/juansortiz/?originalSubdomain=co" class="people people-top">
+            <a target="_blank" href="https://www.linkedin.com/in/juansortiz/?originalSubdomain=co" class="people people-top">
               <img src={avatar1} alt="./" />
               <p>Juan Sebastián Ortiz</p>
               <span>Co-founder</span>
             </a>
-            <a href="https://www.linkedin.com/in/boris-ram%C3%ADrez-barrera-47b16981/?originalSubdomain=co" class="people people-top">
+            <a target="_blank" href="https://www.linkedin.com/in/boris-ram%C3%ADrez-barrera-47b16981/?originalSubdomain=co" class="people people-top">
               <img src={avatar2} alt="./" />
               <p>Boris Ramirez</p>
               <span>Co-founder</span>
             </a>
-            <a href="https://www.linkedin.com/in/laurarobu/?challengeId=AQEPW59EoS_c2AAAAXeRUfGGpI2udPU5LSTCwRI5Xp3dOl3Jfgyl1_9hlegiBv1JDb7J6dba7DtwineVhLenhD0IAEBmeg2rHQ&submissionId=a13cbe7f-28b5-6216-6bea-16dfedab443d&originalSubdomain=ca" class="people people-top">
+            <a target="_blank" href="https://www.linkedin.com/in/laurarobu/?challengeId=AQEPW59EoS_c2AAAAXeRUfGGpI2udPU5LSTCwRI5Xp3dOl3Jfgyl1_9hlegiBv1JDb7J6dba7DtwineVhLenhD0IAEBmeg2rHQ&submissionId=a13cbe7f-28b5-6216-6bea-16dfedab443d&originalSubdomain=ca" class="people people-top">
               <img src={avatar3} alt="./" />
               <p>Laura Robu</p>
               <span>Head of Business Operations</span>
@@ -213,44 +213,44 @@ export const App = () => {
         <div class="container">
           <h1 class="title">Alliances</h1>
           <div class="cont-photo">
-            <a href="./">
+            <a href="./" target="_blank">
               <img src={logo3} alt="./" />
             </a>
-            <a href="https://uvirtual.unisabana.edu.co/?utm_source=google&utm_medium=cpc&utm_adgroup=103793025545&utm_campaign=10556128072&utm_content=449377718528&utm_term=&matchtype=b&network=g&device=c&devicemodel=&placement=&target=&adposition=&feeditemid=&gclid=CjwKCAiAmrOBBhA0EiwArn3mfDUiQ79e6i7lxKL4FKfDpPPdjGTrKup1lQGZbhMWWTDOSVTlnOgmuhoCgvsQAvD_BwE">
+            <a target="_blank" href="https://uvirtual.unisabana.edu.co/?utm_source=google&utm_medium=cpc&utm_adgroup=103793025545&utm_campaign=10556128072&utm_content=449377718528&utm_term=&matchtype=b&network=g&device=c&devicemodel=&placement=&target=&adposition=&feeditemid=&gclid=CjwKCAiAmrOBBhA0EiwArn3mfDUiQ79e6i7lxKL4FKfDpPPdjGTrKup1lQGZbhMWWTDOSVTlnOgmuhoCgvsQAvD_BwE">
               <img src={logo4} alt="./" />
             </a>
-            <a href="https://uniandes.edu.co/">
+            <a target="_blank" href="https://uniandes.edu.co/">
               <img src={logo5} alt="./" />
             </a>
-            <a href="https://www.cesa.edu.co/">
+            <a target="_blank" href="https://www.cesa.edu.co/">
               <img src={logo6} alt="./" />
             </a>
           </div>
           <h1 class="title">Our Entrepreneurs</h1>
           <div class="cont-car">
             <Slider {...settings}>
-              <a href="https://poetri-landing.web.app/">
+              <a target="_blank" href="https://poetri-landing.web.app/">
                 <img src={logo7} alt="./" />
               </a>
-              <a href="https://mercadodelcampo.co/">
+              <a target="_blank" href="https://mercadodelcampo.co/">
                 <img src={logo2} alt="./" />
               </a>
-              <a href="./">
+              <a target="_blank" href="http://tockall.com/">
                 <img src={logo1} alt="./" />
               </a>
-              <a href="https://www.movii.com.co/en/home/">
+              <a target="_blank" href="https://www.movii.com.co/en/home/">
               <img src={logo8} alt="./" />
               </a>
               <div className="double">
-                <a href="https://www.ruedaz.com.co/home">
+                <a target="_blank" href="https://www.ruedaz.com.co/home">
                   <img src={logo10} alt="./" />
                 </a>
-                <a href="http://parking.net.co/es/ ">
+                <a target="_blank" href="http://parking.net.co/es/ ">
                 <img src={logo11} alt="./" />
                 </a>
               </div>
               
-              <a href="https://neivor.com/">
+              <a target="_blank" href="https://neivor.com/">
                 <img src={logo9} alt="./" />
               </a>
             </Slider>
@@ -287,7 +287,7 @@ export const App = () => {
 					</p>
           </div>
           <div class="networks">
-            <a href="https://www.linkedin.com/company/carmenta-ventures/about/">
+            <a target="_blank" href="https://www.linkedin.com/company/carmenta-ventures/about/">
               <img src={int} alt="./" />
             </a>
           </div>
