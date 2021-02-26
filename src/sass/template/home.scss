@@ -199,6 +199,7 @@
           display: flex !important;
           justify-content: center;
           align-items: center;
+          
           img {
             height: 38px;
             width: auto;
@@ -319,11 +320,19 @@
     &__Alliances {
       .container {
         padding: 0 15px;
+        .cont-car {
+          a {
+            max-width: 200px;
+            margin-left: 45px;
+          }
+        }
         .slick-next {
           right: 0px;
+          z-index: 300;
         }
         .slick-prev {
           left: 0px;
+          z-index: 300;
         }
         .cont-photo {
           flex-wrap: wrap;
